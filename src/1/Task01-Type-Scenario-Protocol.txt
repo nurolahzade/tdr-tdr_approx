@@ -1,0 +1,85 @@
+Test Method=testEncode(), Test Class=Base64UtilTest [JUNIT4], References={Base64UtilTest.util:UNKNOWNP.Base64Util, base64:java.lang.StringBuilder, Base64UtilTest.util:UNKNOWNP.Base64Util, Base64UtilTest.data:char[], restore:char[], restore:char[], Base64UtilTest.util:UNKNOWNP.Base64Util, Base64UtilTest.data:char[], restore:char[], }, Invocations={UNKNOWNP.Base64Util.encode(2):java.lang.StringBuilder, UNKNOWNP.Base64Util.decode(2):char[], }, Assertions={assertArrayEquals, }
+id=5606 rank=1 score=1.192 fqn=com.amazon.carbonado.raw.TestEncodingStrategy heuristics={R:1.000, K:0.192}
+id=5602 rank=2 score=1.065 fqn=com.amazon.carbonado.raw.TestKeyEncoding heuristics={R:1.000, K:0.065}
+id=1215 rank=3 score=1.062 fqn=net.xoft.security.GenericEncoderTest heuristics={R:1.000, K:0.062}
+id=1194 rank=4 score=1.045 fqn=net.xoft.common.ldap.test.LdapBinderTEST heuristics={R:1.000, K:0.045}
+id=16766 rank=5 score=1.041 fqn=org.lockss.util.TestStringUtil heuristics={R:1.000, K:0.041}
+id=6643 rank=6 score=1.029 fqn=org.jamon.codegen.EncodingReaderTest heuristics={R:1.000, K:0.029}
+id=1575 rank=7 score=1.025 fqn=org.easycsv.DatabaseTest heuristics={R:1.000, K:0.025}
+id=1569 rank=8 score=1.024 fqn=org.easycsv.HtmlTest heuristics={R:1.000, K:0.024}
+id=1585 rank=9 score=1.024 fqn=org.easycsv.StringHandlerTest heuristics={R:1.000, K:0.024}
+id=16755 rank=10 score=1.022 fqn=org.lockss.util.TestStreamUtil heuristics={R:1.000, K:0.022}
+id=6633 rank=11 score=1.021 fqn=org.jamon.util.StringUtilsTest heuristics={R:1.000, K:0.021}
+id=3246 rank=12 score=1.016 fqn=org.exist.xmlrpc.MoveResourceTest heuristics={R:1.000, K:0.016}
+id=10056 rank=13 score=1.011 fqn=corbie.test.UTF8Test heuristics={R:1.000, K:0.011}
+id=9929 rank=14 score=1.008 fqn=net.sf.beanlib.utils.StringUtilsTest heuristics={R:1.000, K:0.008}
+id=10170 rank=15 score=1.008 fqn=net.buffalo.protocal.PrimitiveTypeUtilsTest heuristics={R:1.000, K:0.008}
+id=13487 rank=16 score=1.000 fqn=com.uceditor.datastructs.TrieMapTest heuristics={R:1.000}
+id=15958 rank=17 score=1.000 fqn=org.mifos.framework.struts.tags.MifosSelectTagTest heuristics={R:1.000}
+id=1828 rank=18 score=1.000 fqn=org.millscript.tools.PushbackLinenumberReaderTest heuristics={R:1.000}
+id=8335 rank=19 score=1.000 fqn=net.sourceforge.voctutor.io.FileHistoryTest heuristics={R:1.000}
+id=10502 rank=20 score=1.000 fqn=games.strategy.net.MessengerTest heuristics={R:1.000}
+id=3591 rank=21 score=1.000 fqn=org.jvoicexml.interpreter.grammar.TestSrgsXmlGrammarIdentifier heuristics={R:1.000}
+id=9945 rank=22 score=1.000 fqn=net.sf.beanlib.io.FastLineNumberReaderTest heuristics={R:1.000}
+id=15850 rank=23 score=1.000 fqn=org.mifos.framework.components.customTableTag.TableTagParserTest heuristics={R:1.000}
+id=16145 rank=24 score=1.000 fqn=org.mifos.security.rolesandpermission.utils.helpers.RoleTempleteBuilderIntegrationTest heuristics={R:1.000}
+id=2544 rank=25 score=1.000 fqn=utils.TestCaseWithOutput heuristics={R:1.000}
+id=8338 rank=26 score=1.000 fqn=net.sourceforge.voctutor.io.XmlWriterTest heuristics={R:1.000}
+id=10709 rank=27 score=1.000 fqn=org.hyperic.util.filter.test.TokenReplacerFilterReader_test heuristics={R:1.000}
+id=6220 rank=28 score=1.000 fqn=gsn.storage.SQLUtilsTest heuristics={R:1.000}
+id=3702 rank=29 score=1.000 fqn=tests.org.ntropa.build.DirectoryMonitorTest heuristics={R:1.000}
+id=16644 rank=30 score=1.000 fqn=org.lockss.test.LockssTiming heuristics={R:1.000}
+id=2756 rank=31 score=1.000 fqn=org.zamolxis.parser.ParserTestCase heuristics={R:1.000}
+id=8343 rank=32 score=1.000 fqn=net.sourceforge.voctutor.io.XmlReaderTest heuristics={R:1.000}
+id=11467 rank=33 score=1.000 fqn=de.schlund.pfixxml.multipart.RFC822HeadersTest heuristics={R:1.000}
+id=15949 rank=34 score=1.000 fqn=org.mifos.framework.struts.tags.MifosImageTagTest heuristics={R:1.000}
+id=4082 rank=35 score=1.000 fqn=org.carrot2.filter.langguesser.RawDocumentDetectionTest heuristics={R:1.000}
+id=2874 rank=36 score=1.000 fqn=org.exist.util.test.XMLStringTest heuristics={R:1.000}
+id=8759 rank=37 score=1.000 fqn=org.apache.cocoon.transformation.XAbstractDOMTransformerTestCase heuristics={R:1.000}
+id=11557 rank=38 score=1.000 fqn=net.kano.joustsim.oscar.oscar.service.icbm.dim.DirectimTest heuristics={R:1.000}
+id=15951 rank=39 score=1.000 fqn=org.mifos.framework.struts.tags.MifosLabelTagTest heuristics={R:1.000}
+id=10367 rank=40 score=1.000 fqn=org.riverock.sso.test.TestAuthProxy heuristics={R:1.000}
+id=4912 rank=41 score=1.000 fqn=com._17od.upm.crypto.TestEncryptionService heuristics={R:1.000}
+id=3144 rank=42 score=1.000 fqn=org.exist.util.XMLStringTest heuristics={R:1.000}
+id=8764 rank=43 score=1.000 fqn=org.apache.cocoon.xml.dom.DOMBuilderTestCase heuristics={R:1.000}
+id=12779 rank=44 score=1.000 fqn=org.jaxlib.junit.XTestCase heuristics={R:1.000}
+id=15953 rank=45 score=1.000 fqn=org.mifos.framework.struts.tags.MifosNumberTextTagTest heuristics={R:1.000}
+id=6674 rank=46 score=1.000 fqn=org.jamon.integration.TestBase heuristics={R:1.000}
+id=10403 rank=47 score=1.000 fqn=org.riverock.portlet.test.TestAuthProxy heuristics={R:1.000}
+id=14330 rank=48 score=1.000 fqn=com.javaeedev.util.Base64UtilTest heuristics={K:1.000}
+id=14329 rank=49 score=1.000 fqn=com.javaeedev.util.DateUtilTest heuristics={A:1.000}
+id=15983 rank=50 score=1.000 fqn=org.mifos.framework.util.helpers.ChapterNumSortTest heuristics={A:1.000}
+id=16573 rank=51 score=1.000 fqn=de.fzj.unicore.cis.persistence.TestXmlDBCollection heuristics={A:1.000}
+id=4287 rank=52 score=0.183 fqn=org.jivesoftware.smack.util.StringUtilsTest heuristics={K:0.183}
+id=16775 rank=53 score=0.072 fqn=org.lockss.util.TestUrlUtil heuristics={K:0.072}
+id=7300 rank=54 score=0.038 fqn=quickfix.mina.message.FIXMessageDecoderTest heuristics={K:0.038}
+id=15447 rank=55 score=0.030 fqn=org.mifos.config.struts.action.LookupOptionsActionStrutsTest heuristics={K:0.030}
+id=742 rank=56 score=0.023 fqn=net.sf.k2devel.k2asm.EncodingTest heuristics={K:0.023}
+id=5112 rank=57 score=0.022 fqn=com.brimarx.internet.stack.iterable.SimpleChunkParserTest heuristics={K:0.022}
+id=5173 rank=58 score=0.021 fqn=com.brimarx.icap10.stack.impl.iterable.SimpleIcapRequestParserTest heuristics={K:0.021}
+id=5127 rank=59 score=0.020 fqn=com.brimarx.internet.stack.ChunkParserTest heuristics={K:0.020}
+id=11032 rank=60 score=0.019 fqn=de.meylirh.pwkit.tests.TestCharPlayTimeManager heuristics={K:0.019}
+id=3526 rank=61 score=0.018 fqn=net.sf.pzfilereader.parserutils.ParserUtilsSplitLineTest heuristics={K:0.018}
+id=5164 rank=62 score=0.012 fqn=com.brimarx.icap10.stack.impl.SimpleIcapResponseParserTest heuristics={K:0.012}
+id=3520 rank=63 score=0.011 fqn=net.sf.pzfilereader.parserutils.BXParserTest heuristics={K:0.011}
+id=5080 rank=64 score=0.011 fqn=com.brimarx.util.logs.LogFormatterTest heuristics={K:0.011}
+id=11282 rank=65 score=0.010 fqn=org.helianto.core.service.JavaMailSenderAdapterTests heuristics={K:0.010}
+id=9660 rank=66 score=0.010 fqn=net.sourceforge.cruisecontrol.LogTest heuristics={K:0.010}
+id=4477 rank=67 score=0.010 fqn=edu.rice.cs.plt.iter.IterUtilTest heuristics={K:0.010}
+id=11402 rank=68 score=0.010 fqn=org.helianto.core.SimpleUserUseCaseDomainTests heuristics={K:0.010}
+id=5085 rank=69 score=0.010 fqn=com.brimarx.util.logs.StaticDataSourceTest heuristics={K:0.010}
+id=5087 rank=70 score=0.010 fqn=com.brimarx.util.logs.LogFormatterSimpleFactoryTest heuristics={K:0.010}
+id=5077 rank=71 score=0.009 fqn=com.brimarx.util.logs.NullOrEmptyFilterTest heuristics={K:0.009}
+id=5083 rank=72 score=0.009 fqn=com.brimarx.util.logs.LogContextDataSourceTest heuristics={K:0.009}
+id=7146 rank=73 score=0.009 fqn=quickfix.DefaultSessionFactoryTest heuristics={K:0.009}
+id=9400 rank=74 score=0.009 fqn=net.sourceforge.cruisecontrol.CruiseControlConfigTest heuristics={K:0.009}
+id=11267 rank=75 score=0.009 fqn=org.helianto.core.creation.AuthenticationCreatorTests heuristics={K:0.009}
+id=7154 rank=76 score=0.008 fqn=quickfix.RepeatingGroupTest heuristics={K:0.008}
+id=2848 rank=77 score=0.008 fqn=com.cyclopsgroup.amulets.cyclops.FileUtilsTest heuristics={K:0.008}
+id=4449 rank=78 score=0.008 fqn=koala.dynamicjava.tree.TreeUtilitiesTest heuristics={K:0.008}
+id=5285 rank=79 score=0.008 fqn=net.sf.ehcache.distribution.PayloadUtilTest heuristics={K:0.008}
+id=3039 rank=80 score=0.007 fqn=org.exist.xmldb.test.CreateCollectionsTest heuristics={K:0.007}
+id=3195 rank=81 score=0.007 fqn=org.exist.xmldb.CreateCollectionsTest heuristics={K:0.007}
+id=7340 rank=82 score=0.007 fqn=quickfix.SerializationTest heuristics={K:0.007}
+id=1114 rank=83 score=0.007 fqn=org.chires.test.jdbc.JDBCTest heuristics={K:0.007}
+id=3793 rank=84 score=0.007 fqn=net.joat.legacy.AlignmentTestCase heuristics={K:0.007}
