@@ -15,9 +15,9 @@ public class StringBagTest {
         @Test
         public void testSizeAndAdd() {
                 assertEquals(0, sb.size());
-                assertTrue(sb.empty());
+                assertEquals(sb.empty(), true);
                 sb.add(new StringBuffer("Some string"));
-                assertFalse(sb.empty());
+                assertNotNull(sb);
                 assertEquals(1, sb.size());
                 sb.add(new StringBuffer("Another"), 5);
                 assertEquals(6, sb.size());

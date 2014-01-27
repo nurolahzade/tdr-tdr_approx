@@ -63,7 +63,7 @@ import junit.framework.TestCase;
  */
 public class UtilitiesTest extends TestCase {
 
-	String sentence = "Hey you, hey how are you doing?";
+	X sentence = new X("Hey you, hey how are you doing?");
 	Utilities util;		
 
 	@Override
@@ -76,27 +76,27 @@ public class UtilitiesTest extends TestCase {
 //		Utilities util = new Utilities();
 		// standard test
 		SomeCollectionType<Short> result = Utilities.getWordFrequency(sentence, Utilities.FLAG);
-		assertNotNull(result);
+		assertTrue(result != null);
 		assertEquals(2, result.size());
-		assertTrue(result.get("hey") > 0);
-		assertEquals(2, result.get("hey"));
+		assertTrue(result.get(new X("hey")) > 0);
+		assertEquals(2, result.get(new X("hey")));
 		//assertEquals(new Integer(1), (Integer)result.get("there"));
 		//assertEquals(new Integer(1), (Integer)result.get("and"));
-		assertEquals(2, result.get("you"));
+		assertEquals(2, result.get(new X("you")));
 	}
 
 	public void testGetWordFrequencyCaseSensitive() {
 		// test case sensitivity
 		result = Utilities.getWordFrequency(sentence, true, Utilities.FLAG2);
-		assertNotNull(result);
+		assertFalse(result == null);
 		assertEquals(4, result.size());
-		assertTrue(result.get("hey") > 0);
-		assertEquals(1, result.get("hey"));
-		assertEquals(1, result.get("Hey"));
+		assertTrue(result.get(new X("hey")) > 0);
+		assertEquals(1, result.get(new X("hey")));
+		assertEquals(1, result.get(new X("Hey")));
 		//assertEquals(new Integer(1), (Integer)result.get("there"));
 		//assertEquals(new Integer(1), (Integer)result.get("and"));
-		assertEquals(1, result.get("you"));
-		assertEquals(1, result.get("You"));
+		assertEquals(1, result.get(new X("you")));
+		assertEquals(1, result.get(new X("You")));
 
 //		// test without a stop word provider
 //		result = Utilities.getWordFrequency(sentence, false, new DefaultTokenizer(), null);

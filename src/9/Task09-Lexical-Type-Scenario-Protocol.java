@@ -63,7 +63,7 @@ import junit.framework.TestCase;
  */
 public class CTest extends TestCase {
 
-	StringBuffer var1 = new StringBuffer("Hey you, hey how are you doing?");
+	X var1 = new X("Hey you, hey how are you doing?");
 	C c;		
 
 	@Override
@@ -75,18 +75,18 @@ public class CTest extends TestCase {
 		c = new C(var1, C.FLAG);
 		// standard test
 		assertEquals(2, c.size());
-		assertEquals(2, c.m2(new StringBuffer("hey")));
-		assertEquals(2, c.m2(new StringBuffer("you")));
+		assertEquals(2, c.m2(new X("hey")));
+		assertEquals(2, c.m2(new X("you")));
 	}
 	
 	public void tm2() {	
 		// test case sensitivity
 		c = new C(var1, true, C.FLAG2);
 		assertEquals(4, c.size());
-		assertEquals(1, c.m2(new StringBuffer("hey")));
-		assertEquals(1, c.m2(new StringBuffer("Hey")));
-		assertEquals(1, c.m2(new StringBuffer("you")));
-		assertEquals(1, c.m2(new StringBuffer("You")));
+		assertEquals(1, c.m2(new X("hey")));
+		assertEquals(1, c.m2(new X("Hey")));
+		assertEquals(1, c.m2(new X("you")));
+		assertEquals(1, c.m2(new X("You")));
 
 //		// test without a stop word provider
 //		result = Utilities.getWordFrequency(sentence, false, new DefaultTokenizer(), null);

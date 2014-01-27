@@ -63,7 +63,7 @@ import junit.framework.TestCase;
  */
 public class UtilitiesTest extends TestCase {
 
-	StringBuffer sentence = new StringBuffer("Hello there hello again and hello again.");
+	X sentence = new X("Hello there hello again and hello again.");
 
 	public void testGetWordFrequency() {
 
@@ -72,22 +72,22 @@ public class UtilitiesTest extends TestCase {
 		SomeCollectionType<Short> result = Utilities.getWordFrequency(sentence, Utilities.FLAG);
 		assertNotNull(result);
 		assertEquals(2, result.size());
-		assertTrue(result.get(new StringBuffer("hello")) > 0);
-		assertEquals(3, result.get(new StringBuffer("hello")));
+		assertTrue(result.get(new X("hello")) > 0);
+		assertEquals(3, result.get(new X("hello")));
 		//assertEquals(new Integer(1), (Integer)result.get("there"));
 		//assertEquals(new Integer(1), (Integer)result.get("and"));
-		assertEquals(2, result.get(new StringBuffer("again")));
+		assertEquals(2, result.get(new X("again")));
 
 		// test case sensitivity
 		result = Utilities.getWordFrequency(sentence, true, Utilities.FLAG2);
 		assertNotNull(result);
 		assertEquals(3, result.size());
-		assertTrue(result.get(new StringBuffer("hello")) > 0);
-		assertEquals(2, result.get(new StringBuffer("hello")));
-		assertEquals(1, result.get(new StringBuffer("Hello")));
+		assertTrue(result.get(new X("hello")) > 0);
+		assertEquals(2, result.get(new X("hello")));
+		assertEquals(1, result.get(new X("Hello")));
 		//assertEquals(new Integer(1), (Integer)result.get("there"));
 		//assertEquals(new Integer(1), (Integer)result.get("and"));
-		assertEquals(2, result.get(new StringBuffer("again")));
+		assertEquals(2, result.get(new X("again")));
 
 //		// test without a stop word provider
 //		result = Utilities.getWordFrequency(sentence, false, new DefaultTokenizer(), null);

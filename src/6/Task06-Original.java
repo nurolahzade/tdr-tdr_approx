@@ -1,4 +1,4 @@
-//package de.fzj.unicore.cis;
+package de.fzj.unicore.cis;
 
 import static org.junit.Assert.*;
 

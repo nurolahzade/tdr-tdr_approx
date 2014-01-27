@@ -3,6 +3,7 @@
 //import jargs.gnu.CmdLineParser;
 
 //import java.util.Enumeration;
+import java.util.Arrays;
 import java.util.Locale;
 //import java.util.Vector;
 
@@ -43,20 +44,20 @@ public class CTest extends TestCase {
 	}
 	
 	public void tm1() throws Exception {
-		assertEquals(null, c.m6(var3));		
+		assertNull(c.m6(var3));		
 	}
 	
 	public void tm2() throws Exception {		
 		c.m7(args, Locale.US);
 		
-		assertEquals(null, c.m6(var6));
-		assertEquals(Boolean.TRUE, c.m6(var2));
-		assertEquals(98, ((Integer) c.m6(var3)).intValue());
-		assertEquals("dog", c.m6(var4));
-		assertEquals(var9, c.m6(var8));
-		assertEquals(0.125, ((Double) c.m6(var5))
-				.doubleValue(), 0.1e-4);
-		assertArrayEquals(new String[]{"-d", "10", "last"}, c.m8());
+		assertNull(null, c.m6(var6));
+		assertTrue(c.m6(var2));
+		assertTrue(98 == ((Integer) c.m6(var3)).intValue());
+		assertTrue("dog".equals(c.m6(var4)));
+		assertTrue(1234 == c.m6(var8));
+		assertTrue(Math.abs(0.125 - ((Double) c.m6(var5))
+				.doubleValue()) <= 0.1e-4);
+		assertTrue(Arrays.deepEquals(new String[]{"-d", "10", "last"}, c.m8()));
 	}
 
 

@@ -74,19 +74,19 @@ public class CTest extends TestCase {
 	public void tm1() {
 		// standard test
 		c = new C(var1);
-		assertEquals(2, c.size());
-		assertEquals(2, c.getWordFrequency("hey"));
-		assertEquals(2, c.getWordFrequency("you"));
+		assertEquals(2, c.m1());
+		assertEquals(2, c.m2("hey"));
+		assertEquals(2, c.m2("you"));
 	}
 		
 	public void tm2() {
 		// test case sensitivity
 		c = new C(var1, true);
-		assertEquals(4, c.size());
-		assertEquals(1, c.getWordFrequency("hey"));
-		assertEquals(1, c.getWordFrequency("Hey"));
-		assertEquals(1, c.getWordFrequency("you"));
-		assertEquals(1, c.getWordFrequency("You"));
+		assertEquals(4, c.m1());
+		assertEquals(1, c.m2("hey"));
+		assertEquals(1, c.m2("Hey"));
+		assertEquals(1, c.m2("you"));
+		assertEquals(1, c.m2("You"));
 
 //		// test without a stop word provider
 //		result = Utilities.getWordFrequency(sentence, false, new DefaultTokenizer(), null);

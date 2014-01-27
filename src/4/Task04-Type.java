@@ -15,17 +15,17 @@ public class CreditcardUtilTest {
     @Test
     public void isValid() {
     	
-    	SomeSortOfCollection<StringBuffer, CreditcardType> map = new SomeSortOfCollectionImplementation<StringBuffer, CreditcardType>();
-    	map.put(new StringBuffer("5555444455554442"), CreditcardType.MASTERCARD);
-    	map.put(new StringBuffer("5555555555554444"), CreditcardType.MASTERCARD);
-    	map.put(new StringBuffer("378282246310005"), CreditcardType.AMEX);
-    	map.put(new StringBuffer("4111111111111111"), CreditcardType.VISA);
-    	map.put(new StringBuffer("3528000000000007"), CreditcardType.JCB);
-    	map.put(new StringBuffer("3528000000000015"), CreditcardType.JCB);
-    	map.put(new StringBuffer("3528000000000023"), CreditcardType.JCB);
-    	map.put(new StringBuffer("36666666666660"), CreditcardType.DINERS);
+    	SomeSortOfCollection<X, CreditcardType> map = new SomeSortOfCollectionImplementation<X, CreditcardType>();
+    	map.put(new X("5555444455554442"), CreditcardType.MASTERCARD);
+    	map.put(new X("5555555555554444"), CreditcardType.MASTERCARD);
+    	map.put(new X("378282246310005"), CreditcardType.AMEX);
+    	map.put(new X("4111111111111111"), CreditcardType.VISA);
+    	map.put(new X("3528000000000007"), CreditcardType.JCB);
+    	map.put(new X("3528000000000015"), CreditcardType.JCB);
+    	map.put(new X("3528000000000023"), CreditcardType.JCB);
+    	map.put(new X("36666666666660"), CreditcardType.DINERS);
     	
-    	for(StringBuffer number : map.keySet()) {
+    	for(X number : map.keySet()) {
     		for(CreditcardType type : CreditcardType.values()) {
  
        			String message = number + " : " + type + " : ";

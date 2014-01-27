@@ -1,0 +1,543 @@
+<evaluation output="simulate-evaluation.xml">
+	<!--
+	<task name="Task01" target="com.javaeedev.util.Base64Util">
+		<variation type="anonymized" sut="UNKNOWNP.Base64Util">
+			1/Task01-Anonymized.java
+		</variation>
+		<variation type="original" sut="UNKNOWNP.Base64Util">
+			1/Task01-Original.java
+		</variation>
+		<variation type="lexical" sut="UNKNOWNP.C">
+			1/Task01-Lexical.java
+		</variation>
+		<variation type="type" sut="UNKNOWNP.Base64Util">
+			1/Task01-Type.java
+		</variation>
+		<variation type="scenario" sut="UNKNOWNP.Base64Util">
+			1/Task01-Scenario.java
+		</variation>
+		<variation type="protocol" sut="UNKNOWNP.Base64Util">
+			1/Task01-Protocol.java
+		</variation>
+		<variation type="lexical,type" sut="UNKNOWNP.C">
+			1/Task01-Lexical-Type.java
+		</variation>
+		<variation type="lexical,scenario" sut="UNKNOWNP.C">
+			1/Task01-Lexical-Scenario.java
+		</variation>
+		<variation type="lexical,protocol" sut="UNKNOWNP.C">
+			1/Task01-Lexical-Protocol.java
+		</variation>
+		<variation type="type,scenario" sut="UNKNOWNP.Base64Util">
+			1/Task01-Type-Scenario.java
+		</variation>
+		<variation type="type,protocol" sut="UNKNOWNP.Base64Util">
+			1/Task01-Type-Protocol.java
+		</variation>
+		<variation type="scenario,protocol" sut="UNKNOWNP.Base64Util">
+			1/Task01-Scenario-Protocol.java
+		</variation>
+		<variation type="lexical,type,scenario" sut="UNKNOWNP.C">
+			1/Task01-Lexical-Type-Scenario.java
+		</variation>
+		<variation type="lexical,type,protocol" sut="UNKNOWNP.C">
+			1/Task01-Lexical-Type-Protocol.java
+		</variation>
+		<variation type="lexical,scenario,protocol" sut="UNKNOWNP.C">
+			1/Task01-Lexical-Scenario-Protocol.java
+		</variation>
+		<variation type="type,scenario,protocol" sut="UNKNOWNP.Base64Util">
+			1/Task01-Type-Scenario-Protocol.java
+		</variation>
+		<variation type="lexical,type,scenario,protocol" sut="UNKNOWNP.C">
+			1/Task01-Lexical-Type-Scenario-Protocol.java
+		</variation>		
+	</task>
+	
+	<task name="Task02" target="org.mifos.framework.util.helpers.DateUtils">
+		<variation type="anonymized" sut="DateUtils">		
+			2/Task02-Anonymized.java
+		</variation>
+		<variation type="original" sut="SomeRandomClass">
+			2/Task02-Original.java
+		</variation>
+		<variation type="lexical" sut="SomeRandomClass">
+			2/Task02-Lexical.java
+		</variation>
+		<variation type="type" sut="DateUtils">
+			2/Task02-Type.java
+		</variation>
+		<variation type="scenario" sut="DateUtils">
+			2/Task02-Scenario.java
+		</variation>
+		<variation type="protocol" sut="DateUtils">
+			2/Task02-Protocol.java
+		</variation>
+		<variation type="lexical,type" sut="SomeRandomClass">
+			2/Task02-Lexical-Type.java
+		</variation>
+		<variation type="lexical,scenario" sut="SomeRandomClass">
+			2/Task02-Lexical-Scenario.java
+		</variation>
+		<variation type="lexical,protocol" sut="SomeRandomClass">
+			2/Task02-Lexical-Protocol.java
+		</variation>
+		<variation type="type,scenario" sut="DateUtils">
+			2/Task02-Type-Scenario.java
+		</variation>
+		<variation type="type,protocol" sut="DateUtils">
+			2/Task02-Type-Protocol.java
+		</variation>
+		<variation type="scenario,protocol" sut="DateUtils">
+			2/Task02-Scenario-Protocol.java
+		</variation>
+		<variation type="lexical,type,scenario" sut="SomeRandomClass">
+			2/Task02-Lexical-Type-Scenario.java
+		</variation>
+		<variation type="lexical,type,protocol" sut="SomeRandomClass">
+			2/Task02-Lexical-Type-Protocol.java
+		</variation>
+		<variation type="lexical,scenario,protocol" sut="SomeRandomClass">
+			2/Task02-Lexical-Scenario-Protocol.java
+		</variation>
+		<variation type="type,scenario,protocol" sut="DateUtils">
+			2/Task02-Type-Scenario-Protocol.java
+		</variation>
+		<variation type="lexical,type,scenario,protocol" sut="SomeRandomClass">
+			2/Task02-Lexical-Type-Scenario-Protocol.java
+		</variation>		
+	</task>
+	
+	<task name="Task03" target="com.sfs.ConvertHtmlToText">
+		<variation type="anonymized" sut="ConvertHtmlToText">		
+			3/Task03-Anonymized.java
+		</variation>
+		<variation type="original" sut="ConvertHtmlToText">
+			3/Task03-Original.java
+		</variation>
+		<variation type="lexical" sut="C">
+			3/Task03-Lexical.java
+		</variation>
+		<variation type="type" sut="ConvertHtmlToText">
+			3/Task03-Type.java
+		</variation>
+		<variation type="scenario" sut="ConvertHtmlToText">
+			3/Task03-Scenario.java
+		</variation>
+		<variation type="protocol" sut="ConvertHtmlToText">
+			3/Task03-Protocol.java
+		</variation>
+		<variation type="lexical,type" sut="C">
+			3/Task03-Lexical-Type.java
+		</variation>
+		<variation type="lexical,scenario" sut="C">
+			3/Task03-Lexical-Scenario.java
+		</variation>
+		<variation type="lexical,protocol" sut="C">
+			3/Task03-Lexical-Protocol.java
+		</variation>
+		<variation type="type,scenario" sut="ConvertHtmlToText">
+			3/Task03-Type-Scenario.java
+		</variation>
+		<variation type="type,protocol" sut="ConvertHtmlToText">
+			3/Task03-Type-Protocol.java
+		</variation>
+		<variation type="scenario,protocol" sut="ConvertHtmlToText">
+			3/Task03-Scenario-Protocol.java
+		</variation>
+		<variation type="lexical,type,scenario" sut="C">
+			3/Task03-Lexical-Type-Scenario.java
+		</variation>
+		<variation type="lexical,type,protocol" sut="C">
+			3/Task03-Lexical-Type-Protocol.java
+		</variation>
+		<variation type="lexical,scenario,protocol" sut="C">
+			3/Task03-Lexical-Scenario-Protocol.java
+		</variation>
+		<variation type="type,scenario,protocol" sut="ConvertHtmlToText">
+			3/Task03-Type-Scenario-Protocol.java
+		</variation>
+		<variation type="lexical,type,scenario,protocol" sut="C">
+			3/Task03-Lexical-Type-Scenario-Protocol.java
+		</variation>		
+	</task>
+	
+	<task name="Task04" target="jp.co.iret.suz.s2.validator.util.TypeValidatorUtil">
+		<variation type="anonymized" sut="TypeValidatorUtil">
+			4/Task04-Anonymized.java
+		</variation>
+		<variation type="original" sut="TypeValidatorUtil">
+			4/Task04-Original.java
+		</variation>
+		<variation type="lexical" sut="C">
+			4/Task04-Lexical.java
+		</variation>
+		<variation type="type" sut="TypeValidatorUtil">
+			4/Task04-Type.java
+		</variation>
+		<variation type="scenario" sut="TypeValidatorUtil">
+			4/Task04-Scenario.java
+		</variation>
+		<variation type="protocol" sut="TypeValidatorUtil">
+			4/Task04-Protocol.java
+		</variation>
+		<variation type="lexical,type" sut="C">
+			4/Task04-Lexical-Type.java
+		</variation>
+		<variation type="lexical,scenario" sut="C">
+			4/Task04-Lexical-Scenario.java
+		</variation>
+		<variation type="lexical,protocol" sut="C">
+			4/Task04-Lexical-Protocol.java
+		</variation>
+		<variation type="type,scenario" sut="TypeValidatorUtil">
+			4/Task04-Type-Scenario.java
+		</variation>
+		<variation type="type,protocol" sut="TypeValidatorUtil">
+			4/Task04-Type-Protocol.java
+		</variation>
+		<variation type="scenario,protocol" sut="TypeValidatorUtil">
+			4/Task04-Scenario-Protocol.java
+		</variation>
+		<variation type="lexical,type,scenario" sut="C">
+			4/Task04-Lexical-Type-Scenario.java
+		</variation>
+		<variation type="lexical,type,protocol" sut="C">
+			4/Task04-Lexical-Type-Protocol.java
+		</variation>
+		<variation type="lexical,scenario,protocol" sut="C">
+			4/Task04-Lexical-Scenario-Protocol.java
+		</variation>
+		<variation type="type,scenario,protocol" sut="TypeValidatorUtil">
+			4/Task04-Type-Scenario-Protocol.java
+		</variation>
+		<variation type="lexical,type,scenario,protocol" sut="C">
+			4/Task04-Lexical-Type-Scenario-Protocol.java
+		</variation>		
+	</task>
+	-->
+	<task name="Task05" target="UNKNOWNP.StringBag">
+		<variation type="anonymized" sut="UNKNOWNP.StringBag">
+			5/Task05-Anonymized.java
+		</variation>
+		<variation type="original" sut="UNKNOWNP.StringBag">
+			5/Task05-Original.java
+		</variation>
+		<variation type="lexical" sut="UNKNOWNP.C">
+			5/Task05-Lexical.java
+		</variation>
+		<variation type="type" sut="UNKNOWNP.StringBag">
+			5/Task05-Type.java
+		</variation>
+		<variation type="scenario" sut="UNKNOWNP.StringBag">
+			5/Task05-Scenario.java
+		</variation>
+		<variation type="protocol" sut="UNKNOWNP.StringBag">
+			5/Task05-Protocol.java
+		</variation>
+		<variation type="lexical,type" sut="UNKNOWNP.C">
+			5/Task05-Lexical-Type.java
+		</variation>
+		<variation type="lexical,scenario" sut="UNKNOWNP.C">
+			5/Task05-Lexical-Scenario.java
+		</variation>
+		<variation type="lexical,protocol" sut="UNKNOWNP.C">
+			5/Task05-Lexical-Protocol.java
+		</variation>
+		<variation type="type,scenario" sut="UNKNOWNP.StringBag">
+			5/Task05-Type-Scenario.java
+		</variation>
+		<variation type="type,protocol" sut="UNKNOWNP.StringBag">
+			5/Task05-Type-Protocol.java
+		</variation>
+		<variation type="scenario,protocol" sut="UNKNOWNP.StringBag">
+			5/Task05-Scenario-Protocol.java
+		</variation>
+		<variation type="lexical,type,scenario" sut="UNKNOWNP.C">
+			5/Task05-Lexical-Type-Scenario.java
+		</variation>
+		<variation type="lexical,type,protocol" sut="UNKNOWNP.C">
+			5/Task05-Lexical-Type-Protocol.java
+		</variation>
+		<variation type="lexical,scenario,protocol" sut="UNKNOWNP.C">
+			5/Task05-Lexical-Scenario-Protocol.java
+		</variation>
+		<variation type="type,scenario,protocol" sut="UNKNOWNP.StringBag">
+			5/Task05-Type-Scenario-Protocol.java
+		</variation>
+		<variation type="lexical,type,scenario,protocol" sut="UNKNOWNP.C">
+			5/Task05-Lexical-Type-Scenario-Protocol.java
+		</variation>		
+	</task>
+	<!--
+	<task name="Task06" target="org.custommonkey.xmlunit.Diff">
+		<variation type="anonymized" sut="UNKNOWNP.Diff">
+			6/Task06-Anonymized.java
+		</variation>
+		<variation type="original" sut="UNKNOWNP.Diff">
+			6/Task06-Original.java
+		</variation>
+		<variation type="lexical" sut="UNKNOWNP.C">
+			6/Task06-Lexical.java
+		</variation>
+		<variation type="type" sut="UNKNOWNP.Diff">
+			6/Task06-Type.java
+		</variation>
+		<variation type="scenario" sut="UNKNOWNP.Diff">
+			6/Task06-Scenario.java
+		</variation>
+		<variation type="protocol" sut="UNKNOWNP.Diff">
+			6/Task06-Protocol.java
+		</variation>
+		<variation type="lexical,type" sut="UNKNOWNP.C">
+			6/Task06-Lexical-Type.java
+		</variation>
+		<variation type="lexical,scenario" sut="UNKNOWNP.C">
+			6/Task06-Lexical-Scenario.java
+		</variation>
+		<variation type="lexical,protocol" sut="UNKNOWNP.C">
+			6/Task06-Lexical-Protocol.java
+		</variation>
+		<variation type="type,scenario" sut="UNKNOWNP.Diff">
+			6/Task06-Type-Scenario.java
+		</variation>
+		<variation type="type,protocol" sut="UNKNOWNP.Diff">
+			6/Task06-Type-Protocol.java
+		</variation>
+		<variation type="scenario,protocol" sut="UNKNOWNP.Diff">
+			6/Task06-Scenario-Protocol.java
+		</variation>
+		<variation type="lexical,type,scenario" sut="UNKNOWNP.C">
+			6/Task06-Lexical-Type-Scenario.java
+		</variation>
+		<variation type="lexical,type,protocol" sut="UNKNOWNP.UNKNOWN">
+			6/Task06-Lexical-Type-Protocol.java
+		</variation>
+		<variation type="lexical,scenario,protocol" sut="UNKNOWNP.C">
+			6/Task06-Lexical-Scenario-Protocol.java
+		</variation>
+		<variation type="type,scenario,protocol" sut="UNKNOWNP.Diff">
+			6/Task06-Type-Scenario-Protocol.java
+		</variation>
+		<variation type="lexical,type,scenario,protocol" sut="UNKNOWNP.C">
+			6/Task06-Lexical-Type-Scenario-Protocol.java
+		</variation>		
+	</task>
+	
+	<task name="Task07" target="org.lockss.util.IpFilter">
+		<variation type="anonymized" sut="IpFilter">
+			7/Task07-Anonymized.java
+		</variation>
+		<variation type="original" sut="IpFilter">
+			7/Task07-Original.java
+		</variation>
+		<variation type="lexical" sut="C">
+			7/Task07-Lexical.java
+		</variation>
+		<variation type="type" sut="IpFilter">
+			7/Task07-Type.java
+		</variation>
+		<variation type="scenario" sut="IpFilter">
+			7/Task07-Scenario.java
+		</variation>
+		<variation type="protocol" sut="IpFilter">
+			7/Task07-Protocol.java
+		</variation>
+		<variation type="lexical,type" sut="C">
+			7/Task07-Lexical-Type.java
+		</variation>
+		<variation type="lexical,scenario" sut="C">
+			7/Task07-Lexical-Scenario.java
+		</variation>
+		<variation type="lexical,protocol" sut="C">
+			7/Task07-Lexical-Protocol.java
+		</variation>
+		<variation type="type,scenario" sut="IpFilter">
+			7/Task07-Type-Scenario.java
+		</variation>
+		<variation type="type,protocol" sut="IpFilter">
+			7/Task07-Type-Protocol.java
+		</variation>
+		<variation type="scenario,protocol" sut="IpFilter">
+			7/Task07-Scenario-Protocol.java
+		</variation>
+		<variation type="lexical,type,scenario" sut="C">
+			7/Task07-Lexical-Type-Scenario.java
+		</variation>
+		<variation type="lexical,type,protocol" sut="C">
+			7/Task07-Lexical-Type-Protocol.java
+		</variation>
+		<variation type="lexical,scenario,protocol" sut="C">
+			7/Task07-Lexical-Scenario-Protocol.java
+		</variation>
+		<variation type="type,scenario,protocol" sut="IpFilter">
+			7/Task07-Type-Scenario-Protocol.java
+		</variation>
+		<variation type="lexical,type,scenario,protocol" sut="C">
+			7/Task07-Lexical-Type-Scenario-Protocol.java
+		</variation>		
+	</task>
+	
+	<task name="Task08" target="com.abbhsoft.sqlInjectionFilter.SQLInjectionFilterManager">
+		<variation type="anonymized" sut="UNKNOWNP.SQLInjectionFilterManager">
+			8/Task08-Anonymized.java
+		</variation>
+		<variation type="original" sut="UNKNOWNP.SQLInjectionFilterManager">
+			8/Task08-Original.java
+		</variation>
+		<variation type="lexical" sut="UNKNOWNP.C">
+			8/Task08-Lexical.java
+		</variation>
+		<variation type="type" sut="UNKNOWNP.SQLInjectionFilterManager">
+			8/Task08-Type.java
+		</variation>
+		<variation type="scenario" sut="UNKNOWNP.SQLInjectionFilterManager">
+			8/Task08-Scenario.java
+		</variation>
+		<variation type="protocol" sut="UNKNOWNP.SQLInjectionFilterManager">
+			8/Task08-Protocol.java
+		</variation>
+		<variation type="lexical,type" sut="UNKNOWNP.C">
+			8/Task08-Lexical-Type.java
+		</variation>
+		<variation type="lexical,scenario" sut="UNKNOWNP.C">
+			8/Task08-Lexical-Scenario.java
+		</variation>
+		<variation type="lexical,protocol" sut="UNKNOWNP.C">
+			8/Task08-Lexical-Protocol.java
+		</variation>
+		<variation type="type,scenario" sut="UNKNOWNP.SQLInjectionFilterManager">
+			8/Task08-Type-Scenario.java
+		</variation>
+		<variation type="type,protocol" sut="UNKNOWNP.SQLInjectionFilterManager">
+			8/Task08-Type-Protocol.java
+		</variation>
+		<variation type="scenario,protocol" sut="UNKNOWNP.SQLInjectionFilterManager">
+			8/Task08-Scenario-Protocol.java
+		</variation>
+		<variation type="lexical,type,scenario" sut="UNKNOWNP.C">
+			8/Task08-Lexical-Type-Scenario.java
+		</variation>
+		<variation type="lexical,type,protocol" sut="UNKNOWNP.C">
+			8/Task08-Lexical-Type-Protocol.java
+		</variation>
+		<variation type="lexical,scenario,protocol" sut="UNKNOWNP.C">
+			8/Task08-Lexical-Scenario-Protocol.java
+		</variation>
+		<variation type="type,scenario,protocol" sut="UNKNOWNP.SQLInjectionFilterManager">
+			8/Task08-Type-Scenario-Protocol.java
+		</variation>
+		<variation type="lexical,type,scenario,protocol" sut="UNKNOWNP.C">
+			8/Task08-Lexical-Type-Scenario-Protocol.java
+		</variation>		
+	</task>
+	
+	<task name="Task09" target="net.sf.classifier4J.Utilities">
+		<variation type="anonymized" sut="Utilities">
+			9/Task09-Anonymized.java
+		</variation>
+		<variation type="original" sut="Utilities">
+			9/Task09-Original.java
+		</variation>
+		<variation type="lexical" sut="C">
+			9/Task09-Lexical.java
+		</variation>
+		<variation type="type" sut="Utilities">
+			9/Task09-Type.java
+		</variation>
+		<variation type="scenario" sut="Utilities">
+			9/Task09-Scenario.java
+		</variation>
+		<variation type="protocol" sut="Utilities">
+			9/Task09-Protocol.java
+		</variation>
+		<variation type="lexical,type" sut="C">
+			9/Task09-Lexical-Type.java
+		</variation>
+		<variation type="lexical,scenario" sut="C">
+			9/Task09-Lexical-Scenario.java
+		</variation>
+		<variation type="lexical,protocol" sut="C">
+			9/Task09-Lexical-Protocol.java
+		</variation>
+		<variation type="type,scenario" sut="Utilities">
+			9/Task09-Type-Scenario.java
+		</variation>
+		<variation type="type,protocol" sut="Utilities">
+			9/Task09-Type-Protocol.java
+		</variation>
+		<variation type="scenario,protocol" sut="Utilities">
+			9/Task09-Scenario-Protocol.java
+		</variation>
+		<variation type="lexical,type,scenario" sut="C">
+			9/Task09-Lexical-Type-Scenario.java
+		</variation>
+		<variation type="lexical,type,protocol" sut="C">
+			9/Task09-Lexical-Type-Protocol.java
+		</variation>
+		<variation type="lexical,scenario,protocol" sut="C">
+			9/Task09-Lexical-Scenario-Protocol.java
+		</variation>
+		<variation type="type,scenario,protocol" sut="Utilities">
+			9/Task09-Type-Scenario-Protocol.java
+		</variation>
+		<variation type="lexical,type,scenario,protocol" sut="C">
+			9/Task09-Lexical-Type-Scenario-Protocol.java
+		</variation>		
+	</task>
+	
+	<task name="Task10" target="jargs.gnu.CmdLineParser">
+		<variation type="anonymized" sut="CmdLineParser">
+			10/Task10-Anonymized.java
+		</variation>
+		<variation type="original" sut="CmdLineParser">
+			10/Task10-Original.java
+		</variation>
+		<variation type="lexical" sut="C">
+			10/Task10-Lexical.java
+		</variation>
+		<variation type="type" sut="CmdLineParser">
+			10/Task10-Type.java
+		</variation>
+		<variation type="scenario" sut="CmdLineParser">
+			10/Task10-Scenario.java
+		</variation>
+		<variation type="protocol" sut="CmdLineParser">
+			10/Task10-Protocol.java
+		</variation>
+		<variation type="lexical,type" sut="C">
+			10/Task10-Lexical-Type.java
+		</variation>
+		<variation type="lexical,scenario" sut="C">
+			10/Task10-Lexical-Scenario.java
+		</variation>
+		<variation type="lexical,protocol" sut="C">
+			10/Task10-Lexical-Protocol.java
+		</variation>
+		<variation type="type,scenario" sut="CmdLineParser">
+			10/Task10-Type-Scenario.java
+		</variation>
+		<variation type="type,protocol" sut="CmdLineParser">
+			10/Task10-Type-Protocol.java
+		</variation>
+		<variation type="scenario,protocol" sut="CmdLineParser">
+			10/Task10-Scenario-Protocol.java
+		</variation>
+		<variation type="lexical,type,scenario" sut="C">
+			10/Task10-Lexical-Type-Scenario.java
+		</variation>
+		<variation type="lexical,type,protocol" sut="C">
+			10/Task10-Lexical-Type-Protocol.java
+		</variation>
+		<variation type="lexical,scenario,protocol" sut="C">
+			10/Task10-Lexical-Scenario-Protocol.java
+		</variation>
+		<variation type="type,scenario,protocol" sut="CmdLineParser">
+			10/Task10-Type-Scenario-Protocol.java
+		</variation>
+		<variation type="lexical,type,scenario,protocol" sut="C">
+			10/Task10-Lexical-Type-Scenario-Protocol.java
+		</variation>		
+	</task>
+	-->
+</evaluation>

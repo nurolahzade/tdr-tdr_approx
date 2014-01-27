@@ -10,7 +10,7 @@ public class Base64UtilTest {
     	final String text = "This is a test \n\t\r ===+ \u2076 %$#@";
         String base64 = Base64Util.encodeString(text);
         String restore = Base64Util.decodeString(base64);
-        assertEquals(text, restore);
+        assertTrue(text.equals(restore));
     }
 
     @Test

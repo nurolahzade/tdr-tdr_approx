@@ -84,11 +84,12 @@ public class SomeRandomClassTest extends TestCase {
         java.util.Date b = x.parse("2006-01-01");
         java.util.Date c = x.parse("2006-01-01");
         java.util.Date d = x.parse("2006-12-31");
-       Assert.assertEquals(365, src.ARandomMethodName(a, b));
+        Assert.assertNotNull(a);
+       Assert.assertTrue(365 == src.ARandomMethodName(a, b));
 //       Assert.assertEquals(0, SomeRandomClass.ARandomMethodName(b, c));
         c = x.parse("2006-01-02");
-       Assert.assertEquals(4, src.ARandomMethodName(c, b));
-       Assert.assertEquals(1, src.ARandomMethodName(c, d));
+       Assert.assertTrue(4 == src.ARandomMethodName(c, b));
+       Assert.assertTrue(1 == src.ARandomMethodName(c, d));
     }
 
 //    public void testGetDatePlusXDays() throws Exception {

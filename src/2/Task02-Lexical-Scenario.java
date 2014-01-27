@@ -41,16 +41,16 @@ import org.testng.annotations.Test;
 @Test(groups={"integration", "fastTestsSuite"},  dependsOnGroups={"productMixTestSuite"})
 public class SomeRandomClassTest extends TestCase {
 
-    private Locale savedDefaultLocale;
+    private Locale var;
 
     @Override
     public void setUp() {
-        savedDefaultLocale = Locale.getDefault();
+        var = Locale.getDefault();
     }
 
     @Override
     public void tearDown() {
-        Locale.setDefault(savedDefaultLocale);
+        Locale.setDefault(var);
     }
 
 //    public void testConvertDbToUserFmt() throws InvalidDateException {
@@ -78,11 +78,12 @@ public class SomeRandomClassTest extends TestCase {
         java.util.Date b = x.parse("2006-01-01");
         java.util.Date c = x.parse("2006-01-01");
         java.util.Date d = x.parse("2006-12-31");
-       Assert.assertEquals(365, SomeRandomClass.ARandomMethodName(a, b));
+        Assert.assertNotNull(a);
+       Assert.assertTrue(365 == SomeRandomClass.ARandomMethodName(a, b));
 //       Assert.assertEquals(0, SomeRandomClass.ARandomMethodName(b, c));
         c = x.parse("2006-01-02");
-       Assert.assertEquals(4, SomeRandomClass.ARandomMethodName(c, b));
-       Assert.assertEquals(1, SomeRandomClass.ARandomMethodName(c, d));
+       Assert.assertTrue(4 == SomeRandomClass.ARandomMethodName(c, b));
+       Assert.assertTrue(1 == SomeRandomClass.ARandomMethodName(c, d));
     }
 
 //    public void testGetDatePlusXDays() throws Exception {

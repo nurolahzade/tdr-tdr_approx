@@ -75,13 +75,13 @@ public class DateUtilsTest extends TestCase {
 //        java.util.Date date1 = userFormat.parse("2007-01-01");
 //        java.util.Date date2 = userFormat.parse("2006-01-01");
 //        java.util.Date date3 = userFormat.parse("2006-01-01");
-    	MyDate date1 = new MyDate("2007-01-01");
-    	MyDate date2 = new MyDate("2006-01-01");
-    	MyDate date3 = new MyDate("2006-01-01");
+    	X date1 = new X("2007-01-01");
+    	X date2 = new X("2006-01-01");
+    	X date3 = new X("2006-01-01");
        Assert.assertEquals(365, DateUtils.getNumberOfDaysBetweenTwoDates(date1, date2, true, 1));
        Assert.assertEquals(0, DateUtils.getNumberOfDaysBetweenTwoDates(date2, date3, false, 2));
 //        date3 = userFormat.parse("2006-01-02");
-       date3 = new MyDate("2006-01-02");
+       date3 = new X("2006-01-02");
        Assert.assertEquals(1, DateUtils.getNumberOfDaysBetweenTwoDates(date3, date2, true, 3));
     }
 

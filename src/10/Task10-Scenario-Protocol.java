@@ -51,19 +51,19 @@ public class CmdLineParserTestCase extends TestCase {
 	}
 
 	public void testEmptyArguments() throws Exception {
-		assertEquals(null, parser.getOption(size).getValue());		
+		assertNull(parser.getOption(size).getValue());		
 	}
 	
 	public void testStandardOptions() throws Exception {		
 		parser.parse(args, Locale.US);
 		
-		assertEquals(null, parser.getOption(missing).getValue());
-		assertEquals(Boolean.TRUE, parser.getOption(verbose).getValue());
-		assertEquals(98, ((Integer) parser.getOption(size).getValue()).intValue());
-		assertEquals("dog", parser.getOption(name).getValue());
-		assertEquals(longValue, parser.getOption(bignum).getValue());
-		assertEquals(0.125, ((Double) parser.getOption(fraction).getValue())
-				.doubleValue(), 0.1e-4);
+		assertNull(parser.getOption(missing).getValue());
+		assertTrue(parser.getOption(verbose).getValue());
+		assertTrue(98 == ((Integer) parser.getOption(size).getValue()).intValue());
+		assertTrue("dog".equals(parser.getOption(name).getValue()));
+		assertTrue(1234 == parser.getOption(bignum).getValue());
+		assertTrue(Math.abs(0.125 - ((Double) parser.getOption(fraction).getValue())
+				.doubleValue()) <= 0.1e-4);
 	}
 
 

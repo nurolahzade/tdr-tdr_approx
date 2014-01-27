@@ -62,7 +62,7 @@ public class CTest {
 //        System.out.println("filter");
         for (int i = 0; i < var1.length; ++i) {
             assertFalse(c.valid(var1[i]));        	
-            assertEquals(var2[i], c.m2(var1[i]));
+            assertTrue(var2[i].equals(c.m2(var1[i])));
         }
     }
 

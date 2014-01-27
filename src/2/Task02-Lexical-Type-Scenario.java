@@ -74,15 +74,15 @@ public class SomeRandomClassTest extends TestCase {
 
     public void testARandomTestMethodName() throws Exception {
 //        SimpleDateFormat x = new SimpleDateFormat("yyyy-MM-dd");
-        MyDate a = new MyDate("2007-01-01");
-        MyDate b = new MyDate("2006-01-01");
-        MyDate c = new MyDate("2006-01-01");
-        MyDate d = new MyDate("2006-12-31");
-       Assert.assertEquals(365, SomeRandomClass.ARandomMethodName(a, b, true, 1));
+        X a = new X("2007-01-01");
+        X b = new X("2006-01-01");
+        X c = new X("2006-01-01");
+        X d = new X("2006-12-31");
+       Assert.assertTrue(365 == SomeRandomClass.ARandomMethodName(a, b, true, 1));
 //       Assert.assertEquals(0, SomeRandomClass.ARandomMethodName(b, c, false, 2));
-        c = new MyDate("2006-01-05");
-       Assert.assertEquals(4, SomeRandomClass.ARandomMethodName(c, b, true, 3));
-       Assert.assertEquals(1, SomeRandomClass.ARandomMethodName(c, d, true, 4));
+        c = new X("2006-01-05");
+       Assert.assertTrue(4 == SomeRandomClass.ARandomMethodName(c, b, true, 3));
+       Assert.assertTrue(1 == SomeRandomClass.ARandomMethodName(c, d, true, 4));
     }
 
 //    public void testGetDatePlusXDays() throws Exception {

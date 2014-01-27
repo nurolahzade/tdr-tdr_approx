@@ -1,0 +1,43 @@
+<evaluation output="subset-evaluation.xml">
+
+	<task name="Task01" target="com.javaeedev.util.Base64Util" sut="UNKNOWNP.Base64Util">
+		/home/mehrdad/workspace2/factextractor/test-res/Task01.java
+	</task>
+		
+	<task name="Task02" target="org.mifos.framework.util.helpers.DateUtils" sut="DateUtils">
+		/home/mehrdad/workspace2/factextractor/test-res/Task02.java	
+	</task>
+
+	<task name="Task03" target="com.sfs.ConvertHtmlToText" sut="ConvertHtmlToText">
+		/home/mehrdad/workspace2/factextractor/test-res/Task03.java
+	</task>
+	
+	<task name="Task04" target="jp.co.iret.suz.s2.validator.util.CreditcardUtil" sut="TypeValidatorUtil">
+		/home/mehrdad/workspace2/factextractor/test-res/Task04.java
+	</task>
+	
+	<task name="Task05" target="StringBag" sut="UNKNOWNP.StringBag">
+		/home/mehrdad/workspace2/factextractor/test-res/Task05.java
+	</task>
+
+	<task name="Task06" target="de.fzj.unicore.cis.Diff" sut="UNKNOWNP.Diff">
+		/home/mehrdad/workspace2/factextractor/test-res/Task06.java
+	</task>
+
+	<task name="Task07" target="org.lockss.util.IpFilter" sut="IpFilter">
+		/home/mehrdad/workspace2/factextractor/test-res/Task07.java
+	</task>
+
+	<task name="Task08" target="com.abbhsoft.sqlInjectionFilter.SQLInjectionFilterManager" sut="UNKNOWNP.SQLInjectionFilterManager">
+		/home/mehrdad/workspace2/factextractor/test-res/Task08.java
+	</task>
+
+	<task name="Task09" target="net.sf.classifier4J.Utilities" sut="Utilities">
+		/home/mehrdad/workspace2/factextractor/test-res/Task09.java
+	</task>
+
+	<task name="Task10" target="jargs.test.gnu.CmdLineParser" sut="CmdLineParser">
+		/home/mehrdad/workspace2/factextractor/test-res/Task10.java
+	</task>
+	
+</evaluation>

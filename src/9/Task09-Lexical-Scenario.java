@@ -74,9 +74,9 @@ public class CTest extends TestCase {
 	public void tm1() {
 		// standard test
 		Map var2 = c.m1(var1);
-		assertNotNull(var2);
+		assertTrue(var2 != null);
 		assertEquals(2, var2.size());
-		assertNotNull(var2.get("hey"));
+		assertTrue(var2.get("hey") != null);
 		assertEquals(new Integer(2), (Integer) var2.get("hey"));
 		//assertEquals(new Integer(1), (Integer)result.get("there"));
 		//assertEquals(new Integer(1), (Integer)result.get("and"));
@@ -86,9 +86,9 @@ public class CTest extends TestCase {
 	public void tm2() {
 		// test case sensitivity
 		var2 = c.m1(var1, true);
-		assertNotNull(var2);
+		assertFalse(var2 == null);
 		assertEquals(4, var2.size());
-		assertNotNull(var2.get("hey"));
+		assertFalse(var2.get("hey") == null);
 		assertEquals(new Integer(1), (Integer) var2.get("hey"));
 		assertEquals(new Integer(1), (Integer) var2.get("Hey"));
 		//assertEquals(new Integer(1), (Integer)result.get("there"));

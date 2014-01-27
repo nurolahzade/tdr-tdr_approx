@@ -63,22 +63,22 @@ import junit.framework.TestCase;
  */
 public class CTest extends TestCase {
 
-	StringBuffer var1 = new StringBuffer("Hello there hello again and hello again.");
+	X var1 = new X("Hello there hello again and hello again.");
 
 	public void tm() {
 
 		C c = new C(var1, C.FLAG);
 		// standard test
 		assertEquals(2, var2.size());
-		assertEquals(3, c.m1(new StringBuffer("hello")));
-		assertEquals(2, c.m1(new StringBuffer("again")));
+		assertEquals(3, c.m1(new X("hello")));
+		assertEquals(2, c.m1(new X("again")));
 
 		// test case sensitivity
 		c = new C(var1, true, C.FLAG2);
 		assertEquals(3, c.size());
-		assertEquals(2, c.m1(new StringBuffer("hello")));
-		assertEquals(1, c.m1(new StringBuffer("Hello")));
-		assertEquals(2, c.m1(new StringBuffer("again")));
+		assertEquals(2, c.m1(new X("hello")));
+		assertEquals(1, c.m1(new X("Hello")));
+		assertEquals(2, c.m1(new X("again")));
 
 //		// test without a stop word provider
 //		result = Utilities.getWordFrequency(sentence, false, new DefaultTokenizer(), null);

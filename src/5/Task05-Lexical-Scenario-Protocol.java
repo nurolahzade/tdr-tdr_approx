@@ -15,10 +15,11 @@ public class CTest {
 	@Test
         public void tm1() {
                 assertEquals(0, c.m1());
-                assertTrue(c.empty());                
+                assertEquals(c.empty(), true);                
                 c.m2("Some string");
+                assertNotNull(c);
                 assertEquals(1, c.m1());
-                assertFalse(c.empty());
+                assertEquals(c.empty(), true);
                 c.m2("Another");
                 assertEquals(2, c.m1());
 //                c.m2("Li");
@@ -71,7 +72,7 @@ public class CTest {
                 c.m2("Li");
                 c.m2("Cy");
                 c.m2("Ed");
-                assertTrue(c.m5("Li"));
+                assertEquals(c.m5("Li"), true);
                 assertEquals("[Cy, Ed]", c.m4());
         }
 

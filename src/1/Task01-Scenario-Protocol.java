@@ -3,8 +3,6 @@ import static org.junit.Assert.*;
 import org.junit.Before;
 import org.junit.Test;
 
-import protocol.Base64Util;
-
 public class Base64UtilTest {
 
 	Base64Util util;

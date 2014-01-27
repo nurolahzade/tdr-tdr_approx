@@ -3,6 +3,7 @@
 //import jargs.gnu.CmdLineParser;
 
 //import java.util.Enumeration;
+import java.util.Arrays;
 import java.util.Locale;
 //import java.util.Vector;
 
@@ -43,20 +44,20 @@ public class CmdLineParserTestCase extends TestCase {
 	}
 
 	public void testEmptyArguments() throws Exception {
-		assertEquals(null, parser.getOptionValue(size));		
+		assertNull(parser.getOptionValue(size));		
 	}
 	
 	public void testStandardOptions() throws Exception {		
 		parser.parse(args, Locale.US);
 		
-		assertEquals(null, parser.getOptionValue(missing));
-		assertEquals(Boolean.TRUE, parser.getOptionValue(verbose));
-		assertEquals(98, ((Integer) parser.getOptionValue(size)).intValue());
-		assertEquals("dog", parser.getOptionValue(name));
-		assertEquals(longValue, parser.getOptionValue(bignum));
-		assertEquals(0.125, ((Double) parser.getOptionValue(fraction))
-				.doubleValue(), 0.1e-4);
-		assertArrayEquals(new String[]{"-d", "10", "last"}, parser.getRemainingArgs());
+		assertNull(parser.getOptionValue(missing));
+		assertTrue(parser.getOptionValue(verbose));
+		assertTrue(98 == ((Integer) parser.getOptionValue(size)).intValue());
+		assertTrue("dog".equals(parser.getOptionValue(name)));
+		assertTrue(1234 == parser.getOptionValue(bignum));
+		assertTrue(Math.abs(0.125 - ((Double) parser.getOptionValue(fraction))
+				.doubleValue()) <= 0.1e-4);
+		assertTrue(Arrays.deepEquals(new String[]{"-d", "10", "last"}, parser.getRemainingArgs()));
 	}
 
 

@@ -12,7 +12,7 @@
 
 import org.junit.Before;
 import org.junit.Test;
-import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 
 /**
  * The Class ConvertHtmlToTextTest.
@@ -50,11 +50,11 @@ public class ConvertHtmlToTextTest {
         // StringUtils.replace(expResult, "\n","~"));
         // System.out.println("Result: " + StringUtils.replace(result, "\n","~"));;
 
-        assertEquals(expResult, result);
+        assertTrue(expResult.equals(result));
 
         String html = "<html><head></head><body><p>Hello!</p></body></html>";
         String text = "Hello!\n";
-        assertEquals(text, instance.convert(html));
+        assertTrue(text.equals(instance.convert(html)));
     }
 
     /**

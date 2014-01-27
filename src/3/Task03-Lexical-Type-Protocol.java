@@ -37,9 +37,9 @@ public class CTest {
 
         C c = new C(C.FLAG);
 
-        final StringBuilder var1 = this.m1();
+        final X var1 = this.m1();
         String var = c.aDummyMethod(true);
-        final StringBuilder var2 = c.m(true, m2(), 1);
+        final X var2 = c.m(true, m2(), 1);
         c.anotherDummyMethod(var);
 
         // System.out.println("Expected Result: " +
@@ -54,8 +54,8 @@ public class CTest {
      *
      * @return the source
      */
-    private StringBuilder m2() {
-    	StringBuilder var = new StringBuilder();
+    private X m2() {
+    	X var = new X();
 
         var.append("<html>");
         var.append("<head>");
@@ -92,8 +92,8 @@ public class CTest {
      *
      * @return the exp result
      */
-    private StringBuilder m1() {
-    	StringBuilder var = new StringBuilder();
+    private X m1() {
+    	X var = new X();
         var.append("My first page \n");
         var.append("\n");
         var.append("This is my first web page and I can say anything ");

@@ -40,7 +40,7 @@ public class CTest {
     		for(A var3 : A.m2()) {
  
        			boolean var5 = c.m3(var2, var3);
-       			assertEquals(var3 == var1.m4(var2), var5);
+       			assertTrue((var3 == var1.m4(var2)) == var5);
     		}
     	}
     	

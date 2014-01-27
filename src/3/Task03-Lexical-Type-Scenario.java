@@ -11,7 +11,7 @@
 //package com.sfs;
 
 import org.junit.Test;
-import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 
 /**
  * The Class ConvertHtmlToTextTest.
@@ -37,18 +37,18 @@ public class CTest {
 
         C c = new C(C.FLAG);
 
-        final StringBuilder var1 = this.m1();
-        final StringBuilder var2 = c.m(true, m2(), 1);
+        final X var1 = this.m1();
+        final X var2 = c.m(true, m2(), 1);
 
         // System.out.println("Expected Result: " +
         // StringUtils.replace(expResult, "\n","~"));
         // System.out.println("Result: " + StringUtils.replace(result, "\n","~"));;
 
-        assertEquals(var1, var2);
+        assertTrue(var1.equals(var2));
         
         String var3 = "<html><head></head><body><p>Hello!</p></body></html>";
         String var4 = "Hello!\n";
-        assertEquals(var4, c.m(false, var3, 0));        
+        assertTrue(var4.equals(c.m(false, var3, 0)));        
     }
 
     /**
@@ -56,8 +56,8 @@ public class CTest {
      *
      * @return the source
      */
-    private StringBuilder m2() {
-    	StringBuilder var = new StringBuilder();
+    private X m2() {
+    	X var = new X();
 
         var.append("<html>");
         var.append("<head>");
@@ -95,8 +95,8 @@ public class CTest {
      *
      * @return the exp result
      */
-    private StringBuilder m1() {
-    	StringBuilder var = new StringBuilder();
+    private X m1() {
+    	X var = new X();
         var.append("My first page \n");
         var.append("\n");
         var.append("This is my first web page and I can say anything ");

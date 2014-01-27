@@ -10,26 +10,26 @@ import junit.framework.TestCase;
 
 public class CTest extends TestCase {
 
-	public CTest(StringBuffer var1) {
+	public CTest(X var1) {
 		super(var1.toString());
 	}
 
 	public void tm() throws Exception {
 		C c = new CFactory.makeC(Locale.US, C.FLAG);
 		
-		OtherClass var2 = new OtherSubClass1(new StringBuffer("verbose"), 'v', true); 
+		OtherClass var2 = new OtherSubClass1(new X("verbose"), 'v', true); 
 		c.m1(var2);
-		OtherClass var3 = new OtherSubClass2(new StringBuffer("size"),'s', true); 
+		OtherClass var3 = new OtherSubClass2(new X("size"),'s', true); 
 		c.m1(var3);
-		OtherClass var4 = new OtherSubClass3(new StringBuffer("name"), 'n', false); 
+		OtherClass var4 = new OtherSubClass3(new X("name"), 'n', false); 
 		c.m1(var4);
-		OtherClass var5 = new OtherSubClass4(new StringBuffer("fraction"), 'f', C.FLAG2);
+		OtherClass var5 = new OtherSubClass4(new X("fraction"), 'f', C.FLAG2);
 		c.m1(var5);
-		OtherClass var6 = new OtherSubClass1(new StringBuffer("missing"), 'm'); 
+		OtherClass var6 = new OtherSubClass1(new X("missing"), 'm'); 
 		c.m1(var6);
-		OtherClass var7 = new OtherSubClass1(new StringBuffer("careful")); 
+		OtherClass var7 = new OtherSubClass1(new X("careful")); 
 		c.m1(var7);
-		OtherClass var8 = new OtherSubClass5(new StringBuffer("bignum"), 'b', C.FLAG2); 
+		OtherClass var8 = new OtherSubClass5(new X("bignum"), 'b', C.FLAG2); 
 		c.m1(var8);
 		
 		assertEquals(null, c.m6(var3, C.FLAG3).getValue());
@@ -39,7 +39,7 @@ public class CTest extends TestCase {
 		assertEquals(null, c.m6(var6, C.FLAG3).getValue());
 		assertEquals(Boolean.TRUE, c.m6(var2).getValue());
 		assertEquals(100, ((Short) c.m6(var3).getValue()).shortValue());
-		assertEquals(new StringBuffer("foo"), c.m6(var4, C.FLAG4).getValue());
+		assertEquals(new X("foo"), c.m6(var4, C.FLAG4).getValue());
 		assertEquals(var9, c.m6(var8).getValue());
 		assertEquals(0.1, ((Float) c.m6(var5).getValue())
 				.floatValue(), 0.1e-6);

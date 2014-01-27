@@ -40,7 +40,7 @@ public class CreditcardUtilTest {
     		for(CreditcardType type : CreditcardType.values()) {
  
        			boolean result = util.isCreditcardNumber(number, type);
-       			assertEquals(type == map.get(number), result);       			
+       			assertTrue((type == map.get(number)) == result);       			
     		}
     	}
     	

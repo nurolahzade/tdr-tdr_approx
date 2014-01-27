@@ -11,7 +11,7 @@ public class CTest {
     public void testMethod1() {
         StringBuffer var2 = C.m1(var1, true);
         StringBuffer var3 = C.m2(var2, true);
-        assertEquals(var1, var3);
+        assertTrue(var1 == var3);
     }
 
     @Test

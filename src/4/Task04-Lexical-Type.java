@@ -15,17 +15,17 @@ public class CTest {
     @Test
     public void m1() {
     	
-    	SomeSortOfCollection<StringBuffer, A> var1 = new SomeSortOfCollectionImplementation<StringBuffer, A>();
-    	var1.put(new StringBuffer("5555444455554442"), A.T1);
-    	var1.put(new StringBuffer("5555555555554444"), A.T1);
-    	var1.put(new StringBuffer("378282246310005"), A.T2);
-    	var1.put(new StringBuffer("4111111111111111"), A.T3);
-    	var1.put(new StringBuffer("3528000000000007"), A.T4);
-    	var1.put(new StringBuffer("3528000000000015"), A.T4);
-    	var1.put(new StringBuffer("3528000000000023"), A.T4);
-    	var1.put(new StringBuffer("36666666666660"), A.T5);
+    	SomeSortOfCollection<X, A> var1 = new SomeSortOfCollectionImplementation<X, A>();
+    	var1.put(new X("5555444455554442"), A.T1);
+    	var1.put(new X("5555555555554444"), A.T1);
+    	var1.put(new X("378282246310005"), A.T2);
+    	var1.put(new X("4111111111111111"), A.T3);
+    	var1.put(new X("3528000000000007"), A.T4);
+    	var1.put(new X("3528000000000015"), A.T4);
+    	var1.put(new X("3528000000000023"), A.T4);
+    	var1.put(new X("36666666666660"), A.T5);
     	
-    	for(StringBuffer var2 : var1.keySet()) {
+    	for(X var2 : var1.keySet()) {
     		for(A var3 : A.m2()) {
  
        			String var4 = var2 + " : " + var3 + " : ";

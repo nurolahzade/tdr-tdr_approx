@@ -10,35 +10,35 @@ import junit.framework.TestCase;
 
 public class CTest extends TestCase {
 
-	public CTest(StringBuffer var1) {
+	public CTest(X var1) {
 		super(var1.toString());
 	}
 
 	public void tm() throws Exception {
 		C c = new C(C.FLAG);
-		C.InnerClass var2 = c.m1(new StringBuffer("verbose"), 'v', true);
-		C.InnerClass var3 = c.m2(new StringBuffer("size"),'s', true);
-		C.InnerClass var4 = c.m3(new StringBuffer("name"), 'n', false);
-		C.InnerClass var5 = c.m4(new StringBuffer("fraction"), 'f', C.FLAG2);
-		C.InnerClass var6 = c.m1(new StringBuffer("missing"), 'm');
-		C.InnerClass var7 = c.m1(new StringBuffer("careful"));
-		C.InnerClass var8 = c.m5(new StringBuffer("bignum"), 'b', C.FLAG2);
+		C.InnerClass var2 = c.m1(new X("verbose"), 'v', true);
+		C.InnerClass var3 = c.m2(new X("size"),'s', true);
+		C.InnerClass var4 = c.m3(new X("name"), 'n', false);
+		C.InnerClass var5 = c.m4(new X("fraction"), 'f', C.FLAG2);
+		C.InnerClass var6 = c.m1(new X("missing"), 'm');
+		C.InnerClass var7 = c.m1(new X("careful"));
+		C.InnerClass var8 = c.m5(new X("bignum"), 'b', C.FLAG2);
 		
 		assertEquals(null, c.m6(var3, C.FLAG3));
 		Short var9 = new Short(Byte.MAX_VALUE);
-		c.m7(new StringBuffer[] { new StringBuffer("-v"), new StringBuffer("--size=100"), 
-				new StringBuffer("-b"),	new StringBuffer(var9.toString()), new StringBuffer("-n"), 
-				new StringBuffer("foo"), new StringBuffer("-f"), new StringBuffer("0.1"), 
-				new StringBuffer("rest")}, Locale.US);
+		c.m7(new X[] { new X("-v"), new X("--size=100"), 
+				new X("-b"),	new X(var9.toString()), new X("-n"), 
+				new X("foo"), new X("-f"), new X("0.1"), 
+				new X("rest")}, Locale.US);
 		
 		assertEquals(null, c.m6(var6, C.FLAG3));
 		assertEquals(Boolean.TRUE, c.m6(var2));
 		assertEquals(100, ((Short) c.m6(var3)).shortValue());
-		assertEquals(new StringBuffer("foo"), c.m6(var4, C.FLAG4));
+		assertEquals(new X("foo"), c.m6(var4, C.FLAG4));
 		assertEquals(var9, c.m6(var8));
 		assertEquals(0.1, ((Float) c.m6(var5))
 				.floatValue(), 0.1e-6);
-		assertArrayEquals(new StringBuffer[]{new StringBuffer("rest")}, c.m8(C.FLAG5));
+		assertArrayEquals(new X[]{new X("rest")}, c.m8(C.FLAG5));
 	}
 
 

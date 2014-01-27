@@ -53,19 +53,19 @@ public class CmdLineParserTestCase extends TestCase {
 	}
 
 	public void testEmptyArguments() throws Exception {
-		assertEquals(null, parser.getOption(size).getValue());		
+		assertNull(parser.getOption(size).getValue());		
 	}
 	
 	public void testStandardOptions() throws Exception {		
 		parser.parse(args);
 		
-		assertEquals(null, parser.getOption(missing, CmdLineParser.FLAG3).getValue());
-		assertEquals(Boolean.TRUE, parser.getOption(verbose).getValue());
-		assertEquals(98, ((Short) parser.getOption(size).getValue()).shortValue());
-		assertEquals(new StringBuffer("dog"), parser.getOption(name, CmdLineParser.FLAG4).getValue());
-		assertEquals(longValue, parser.getOption(bignum).getValue());
-		assertEquals(0.125, ((Float) parser.getOption(fraction).getValue())
-				.floatValue(), 0.1e-4);
+		assertNull(parser.getOption(missing, CmdLineParser.FLAG3).getValue());
+		assertTrue(parser.getOption(verbose).getValue());
+		assertTrue(98 == ((Short) parser.getOption(size).getValue()).shortValue());
+		assertTrue(new StringBuffer("dog").equals(parser.getOption(name, CmdLineParser.FLAG4).getValue()));
+		assertTrue(1234 == parser.getOption(bignum).getValue());
+		assertTrue(Math.abs(0.125 - ((Float) parser.getOption(fraction).getValue())
+				.floatValue()) <= 0.1e-4);
 	}
 
 

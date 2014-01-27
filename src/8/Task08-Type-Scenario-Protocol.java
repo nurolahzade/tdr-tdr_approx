@@ -62,7 +62,7 @@ public class SQLInjectionFilterManagerTest {
         System.out.println("filter");
         for (int i = 0; i < filterString.length; ++i) {
             assertFalse(instance.valid(filterString[i]));
-            assertEquals(expResult[i], instance.filter(filterString[i]));
+            assertTrue(expResult[i].equals(instance.filter(filterString[i])));
         }
     }    
 

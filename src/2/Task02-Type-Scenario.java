@@ -72,15 +72,15 @@ public class DateUtilsTest extends TestCase {
 
     public void testGetNumberOfDaysBetweenTwoDates() throws Exception {
 //        SimpleDateFormat userFormat = new SimpleDateFormat("yyyy-MM-dd");
-        MyDate date1 = new MyDate("2007-01-01");
-        MyDate date2 = new MyDate("2006-01-01");
-        MyDate date3 = new MyDate("2006-01-01");
-        MyDate date4 = new MyDate("2006-12-31");
-       Assert.assertEquals(365, DateUtils.getNumberOfDaysBetweenTwoDates(date1, date2, true, 1));
+        X date1 = new X("2007-01-01");
+        X date2 = new X("2006-01-01");
+        X date3 = new X("2006-01-01");
+        X date4 = new X("2006-12-31");
+       Assert.assertTrue(365 == DateUtils.getNumberOfDaysBetweenTwoDates(date1, date2, true, 1));
 //       Assert.assertEquals(0, DateUtils.getNumberOfDaysBetweenTwoDates(date2, date3));
-        date3 = new MyDate("2006-01-05");
-       Assert.assertEquals(4, DateUtils.getNumberOfDaysBetweenTwoDates(date3, date2, false, 2));
-       Assert.assertEquals(1, DateUtils.getNumberOfDaysBetweenTwoDates(date3, date4, true, 3));
+        date3 = new X("2006-01-05");
+       Assert.assertTrue(4 == DateUtils.getNumberOfDaysBetweenTwoDates(date3, date2, false, 2));
+       Assert.assertTrue(1 == DateUtils.getNumberOfDaysBetweenTwoDates(date3, date4, true, 3));
     }
 
 //    public void testGetDatePlusXDays() throws Exception {

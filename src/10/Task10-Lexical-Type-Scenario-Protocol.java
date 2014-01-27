@@ -24,7 +24,7 @@ public class CTest extends TestCase {
 	String args;
 	
 
-	public CTest(StringBuffer var1) {
+	public CTest(X var1) {
 		super(var1.toString());
 	}
 
@@ -32,40 +32,40 @@ public class CTest extends TestCase {
 	protected void setUp() throws Exception {
 		c = new C(C.FLAG, Locale.US);
 		
-		var2 = new OtherSubClass1(new StringBuffer("recursive"), 'r', true); 
+		var2 = new OtherSubClass1(new X("recursive"), 'r', true); 
 		c.m1(var2);
-		var3 = new OtherSubClass2(new StringBuffer("low"),'l', true);
+		var3 = new OtherSubClass2(new X("low"),'l', true);
 		c.m1(var3);
-		var4 = new OtherSubClass3(new StringBuffer("match"), 'm', false); 
+		var4 = new OtherSubClass3(new X("match"), 'm', false); 
 		c.m1(var4);
-		var5 = new OtherSubClass4(new StringBuffer("game"), 'g', C.FLAG2);
+		var5 = new OtherSubClass4(new X("game"), 'g', C.FLAG2);
 		c.m1(var5);
-		var6 = new OtherSubClass1(new StringBuffer("part"), 'p');
+		var6 = new OtherSubClass1(new X("part"), 'p');
 		c.m1(var6);
-		var7 = new OtherSubClass1(new StringBuffer("simple")); 
+		var7 = new OtherSubClass1(new X("simple")); 
 		c.m1(var7);
-		var8 = new OtherSubClass5(new StringBuffer("team"), 't', C.FLAG2); 
+		var8 = new OtherSubClass5(new X("team"), 't', C.FLAG2); 
 		c.m1(var8);
-		dummy = new OtherSubClass2(new StringBuffer("dummy"), 'd'); 
+		dummy = new OtherSubClass2(new X("dummy"), 'd'); 
 		c.m1(dummy);
 		
 		args = "-r --low=98 -t " + new Long(1234) + " -match dog -g 0.125 -d 10 last";
 	}
 	
 	public void tm1() throws Exception {
-		assertEquals(null, c.m6(var3, C.FLAG3).getValue());
+		assertNull(c.m6(var3, C.FLAG3).getValue());
 	}
 	
 	public void tm2() throws Exception {
 		c.m7(args);
 		
-		assertEquals(null, c.m6(var6, C.FLAG3).getValue());
-		assertEquals(Boolean.TRUE, c.m6(var2).getValue());
-		assertEquals(98, ((Short) c.m6(var3).getValue()).shortValue());
-		assertEquals(new StringBuffer("dog"), c.m6(var4, C.FLAG4).getValue());
-		assertEquals(var9, c.m6(var8).getValue());
-		assertEquals(0.125, ((Float) c.m6(var5).getValue())
-				.floatValue(), 0.1e-4);
+		assertNull(c.m6(var6, C.FLAG3).getValue());
+		assertTrue(c.m6(var2).getValue());
+		assertTrue(98 == ((Short) c.m6(var3).getValue()).shortValue());
+		assertTrue(new X("dog").equals(c.m6(var4, C.FLAG4).getValue()));
+		assertTrue(1234 == c.m6(var8).getValue());
+		assertTrue(Math.abs(0.125 - ((Float) c.m6(var5).getValue())
+				.floatValue()) <= 0.1e-4);
 	}
 
 

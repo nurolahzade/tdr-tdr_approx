@@ -15,17 +15,17 @@ public class CreditcardUtilTest {
     @Test
     public void isValid() {
     	
-    	SomeSortOfCollection<StringBuffer, CreditcardType> map = new SomeSortOfCollectionImplementation<StringBuffer, CreditcardType>();
-    	map.put(new StringBuffer("5555444455554442"), CreditcardType.getMasterCard());
-    	map.put(new StringBuffer("5555555555554444"), CreditcardType.getMasterCard());
-    	map.put(new StringBuffer("378282246310005"), CreditcardType.getAmex());
-    	map.put(new StringBuffer("4111111111111111"), CreditcardType.getVisa());
-    	map.put(new StringBuffer("3528000000000007"), CreditcardType.getJCB());
-    	map.put(new StringBuffer("3528000000000015"), CreditcardType.getJCB());
-    	map.put(new StringBuffer("3528000000000023"), CreditcardType.getJCB());
-    	map.put(new StringBuffer("36666666666660"), CreditcardType.getDiners());
+    	SomeSortOfCollection<X, CreditcardType> map = new SomeSortOfCollectionImplementation<X, CreditcardType>();
+    	map.put(new X("5555444455554442"), CreditcardType.getMasterCard());
+    	map.put(new X("5555555555554444"), CreditcardType.getMasterCard());
+    	map.put(new X("378282246310005"), CreditcardType.getAmex());
+    	map.put(new X("4111111111111111"), CreditcardType.getVisa());
+    	map.put(new X("3528000000000007"), CreditcardType.getJCB());
+    	map.put(new X("3528000000000015"), CreditcardType.getJCB());
+    	map.put(new X("3528000000000023"), CreditcardType.getJCB());
+    	map.put(new X("36666666666660"), CreditcardType.getDiners());
     	
-    	for(StringBuffer number : map.keySet()) {
+    	for(X number : map.keySet()) {
     		for(CreditcardType type : CreditcardType.getAll()) {
  
        			String message = number + " : " + type + " : ";

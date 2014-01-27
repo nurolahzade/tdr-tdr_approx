@@ -74,9 +74,9 @@ public class UtilitiesTest extends TestCase {
 	public void testGetWordFrequencyCaseInsensitive() {
 		// standard test
 		Map result = util.getWordFrequency(sentence);
-		assertNotNull(result);
+		assertTrue(result != null);
 		assertEquals(2, result.size());
-		assertNotNull(result.get("hey"));
+		assertTrue(result.get("hey") != null);
 		assertEquals(new Integer(2), (Integer) result.get("hey"));
 		assertEquals(new Integer(2), (Integer) result.get("you"));
 	}
@@ -84,9 +84,9 @@ public class UtilitiesTest extends TestCase {
 	public void testGetWordFrequencyCaseSensitive() {
 		// test case sensitivity
 		Map result = util.getWordFrequency(sentence, true);
-		assertNotNull(result);
+		assertFalse(result == null);
 		assertEquals(4, result.size());
-		assertNotNull(result.get("hey"));
+		assertFalse(result.get("hey") == null);
 		assertEquals(new Integer(1), (Integer) result.get("hey"));
 		assertEquals(new Integer(1), (Integer) result.get("Hey"));
 		assertEquals(new Integer(1), (Integer) result.get("you"));

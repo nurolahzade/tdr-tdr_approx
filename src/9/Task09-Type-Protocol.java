@@ -63,24 +63,24 @@ import junit.framework.TestCase;
  */
 public class UtilitiesTest extends TestCase {
 
-	StringBuffer sentence = new StringBuffer("Hello there hello again and hello again.");
+	X sentence = new X("Hello there hello again and hello again.");
 
 	public void testGetWordFrequency() {
 
 		Utilities util = new Utilities(sentence, Utilities.FLAG);
 		// standard test
 		assertEquals(2, util.size());
-		assertEquals(3, util.getWordFrequency(new StringBuffer("hello")));
-		assertEquals(2, util.getWordFrequency(new StringBuffer("again")));
+		assertEquals(3, util.getWordFrequency(new X("hello")));
+		assertEquals(2, util.getWordFrequency(new X("again")));
 
 		// test case sensitivity
 		util = new Utilities(sentence, true, Utilities.FLAG2);
 		assertEquals(3, util.size());
-		assertEquals(2, util.getWordFrequency(new StringBuffer("hello")));
-		assertEquals(1, util.getWordFrequency(new StringBuffer("Hello")));
+		assertEquals(2, util.getWordFrequency(new X("hello")));
+		assertEquals(1, util.getWordFrequency(new X("Hello")));
 		//assertEquals(new Integer(1), (Integer)result.get("there"));
 		//assertEquals(new Integer(1), (Integer)result.get("and"));
-		assertEquals(2, util.getWordFrequency(new StringBuffer("again")));
+		assertEquals(2, util.getWordFrequency(new X("again")));
 
 //		// test without a stop word provider
 //		result = Utilities.getWordFrequency(sentence, false, new DefaultTokenizer(), null);

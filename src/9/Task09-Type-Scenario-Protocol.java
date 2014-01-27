@@ -63,7 +63,7 @@ import junit.framework.TestCase;
  */
 public class UtilitiesTest extends TestCase {
 
-	String sentence = "Hey you, hey how are you doing?";
+	X sentence = new X("Hey you, hey how are you doing?");
 	Utilities util;		
 
 	@Override
@@ -76,18 +76,18 @@ public class UtilitiesTest extends TestCase {
 		Utilities util = new Utilities(sentence, Utilities.FLAG);
 		// standard test
 		assertEquals(2, util.size());
-		assertEquals(2, util.getWordFrequency("hey"));
-		assertEquals(2, util.getWordFrequency("you"));
+		assertEquals(2, util.getWordFrequency(new X("hey")));
+		assertEquals(2, util.getWordFrequency(new X("you")));
 	}
 
 	public void testGetWordFrequencyCaseSensitive() {
 		// test case sensitivity
 		Utilities util = new Utilities(sentence, true, Utilities.FLAG2);
 		assertEquals(4, util.size());
-		assertEquals(1, util.getWordFrequency("hey"));
-		assertEquals(1, util.getWordFrequency("Hey"));
-		assertEquals(1, util.getWordFrequency("you"));
-		assertEquals(1, util.getWordFrequency("You"));
+		assertEquals(1, util.getWordFrequency(new X("hey")));
+		assertEquals(1, util.getWordFrequency(new X("Hey")));
+		assertEquals(1, util.getWordFrequency(new X("you")));
+		assertEquals(1, util.getWordFrequency(new X("You")));
 
 //		// test without a stop word provider
 //		result = Utilities.getWordFrequency(sentence, false, new DefaultTokenizer(), null);

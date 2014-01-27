@@ -15,6 +15,7 @@ public class CTest {
         public void tm1() {
                 assertEquals(0, c.m1());
                 c.m2(new StringBuffer("Some string"));
+                assertNotNull(c);
                 assertEquals(1, c.m1());
                 c.m2(new StringBuffer("Another"));
                 assertEquals(2, c.m1());
@@ -66,7 +67,7 @@ public class CTest {
                 c.m2(new StringBuffer("Li"));
                 c.m2(new StringBuffer("Cy"));
                 c.m2(new StringBuffer("Ed"));
-                assertTrue(c.m5(new StringBuffer("Li")));
+                assertEquals(c.m5(new StringBuffer("Li")), true);
                 assertEquals("[Cy, Ed]", c.m4());
         }
 

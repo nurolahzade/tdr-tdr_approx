@@ -52,19 +52,19 @@ public class CTest extends TestCase {
 	}
 	
 	public void tm1() throws Exception {
-		assertEquals(null, c.m6(var3).getValue());		
+		assertNull(c.m6(var3).getValue());		
 	}
 	
 	public void tm2() throws Exception {		
 		c.m7(args);
 		
-		assertEquals(null, c.m6(var6).getValue());
-		assertEquals(Boolean.TRUE, c.m6(var2).getValue());
-		assertEquals(98, ((Integer) c.m6(var3).getValue()).intValue());
-		assertEquals("dog", c.m6(var4).getValue());
-		assertEquals(var9, c.m6(var8).getValue());
-		assertEquals(0.125, ((Double) c.m6(var5).getValue())
-				.doubleValue(), 0.1e-4);
+		assertNull(c.m6(var6).getValue());
+		assertTrue(c.m6(var2).getValue());
+		assertTrue(98 == ((Integer) c.m6(var3).getValue()).intValue());
+		assertTrue("dog".equals(c.m6(var4).getValue()));
+		assertTrue(1234 == c.m6(var8).getValue());
+		assertTrue(Math.abs(0.125 - ((Double) c.m6(var5).getValue())
+				.doubleValue()) <= 0.1e-4);
 	}
 
 

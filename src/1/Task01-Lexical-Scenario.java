@@ -9,7 +9,7 @@ public class CTest {
         final String var1 = "This is a test \n\t\r ===+ \u2076 %$#@";
         String var2 = C.m1(var1);
         String var3 = C.m2(var2);
-        assertEquals(var1, var3);
+        assertTrue(var1 == var3);
     }
 
     @Test

@@ -63,7 +63,7 @@ import junit.framework.TestCase;
  */
 public class CTest extends TestCase {
 
-	StringBuffer var1 = new StringBuffer("Hey you, hey how are you doing?");
+	X var1 = new X("Hey you, hey how are you doing?");
 	C c;		
 
 	@Override
@@ -76,23 +76,23 @@ public class CTest extends TestCase {
 //		C c = new C();
 		// standard test
 		SomeCollectionType<Short> var2 = C.m1(var1, C.FLAG);
-		assertNotNull(var2);
+		assertTrue(var2 != null);
 		assertEquals(2, var2.size());
-		assertTrue(var2.get(new StringBuffer("hey")) > 0);
-		assertEquals(2, var2.get(new StringBuffer("hey")));
-		assertEquals(2, var2.get(new StringBuffer("you")));
+		assertTrue(var2.get(new X("hey")) > 0);
+		assertEquals(2, var2.get(new X("hey")));
+		assertEquals(2, var2.get(new X("you")));
 	}
 	
 	public void tm2() {	
 		// test case sensitivity
 		SomeCollectionType<Short> var2 = C.m1(var1, true, C.FLAG2);
-		assertNotNull(var2);
+		assertFalse(var2 == null);
 		assertEquals(4, var2.size());
-		assertTrue(var2.get(new StringBuffer("hey")) > 0);
-		assertEquals(1, var2.get(new StringBuffer("hey")));
-		assertEquals(1, var2.get(new StringBuffer("Hey")));
-		assertEquals(1, var2.get(new StringBuffer("you")));
-		assertEquals(1, var2.get(new StringBuffer("You")));
+		assertTrue(var2.get(new X("hey")) > 0);
+		assertEquals(1, var2.get(new X("hey")));
+		assertEquals(1, var2.get(new X("Hey")));
+		assertEquals(1, var2.get(new X("you")));
+		assertEquals(1, var2.get(new X("You")));
 
 //		// test without a stop word provider
 //		result = Utilities.getWordFrequency(sentence, false, new DefaultTokenizer(), null);

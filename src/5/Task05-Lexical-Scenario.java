@@ -9,6 +9,7 @@ public class CTest {
                 C c = new C();
                 assertEquals(0, c.m1());
                 c.m2("A string");
+                assertNotNull(c);
                 assertEquals(1, c.m1());
                 c.m2("Another");
                 assertEquals(2, c.m1());
@@ -64,7 +65,7 @@ public class CTest {
                 c.m2("Li");
                 c.m2("Cy");
                 c.m2("Ed");
-                assertTrue(c.m5("Li"));
+                assertEquals(c.m5("Li"), true);
                 assertEquals("[Cy, Ed]", c.m4());
         }
 

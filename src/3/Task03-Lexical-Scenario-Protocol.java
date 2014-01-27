@@ -12,7 +12,7 @@
 
 import org.junit.Before;
 import org.junit.Test;
-import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 
 /**
  * The Class ConvertHtmlToTextTest.
@@ -54,12 +54,12 @@ public class CTest {
         // StringUtils.replace(expResult, "\n","~"));
         // System.out.println("Result: " + StringUtils.replace(result, "\n","~"));;
 
-        assertEquals(var1, var2);
+        assertTrue(var1.equals(var2));
         
         String var3 = "<html><head></head><body><p>Hello!</p></body></html>";
         String var4 = "Hello!\n";
         String _var = c.aDummyMethod(false);
-        assertEquals(var4, c.m(var3));
+        assertTrue(var4.equals(c.m(var3)));
         c.anotherDummyMethod(_var);
     }
 

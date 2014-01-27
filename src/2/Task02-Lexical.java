@@ -41,16 +41,16 @@ import org.testng.annotations.Test;
 @Test(groups={"integration", "fastTestsSuite"},  dependsOnGroups={"productMixTestSuite"})
 public class SomeRandomClassTest extends TestCase {
 
-    private Locale savedDefaultLocale;
+    private Locale var;
 
     @Override
     public void setUp() {
-        savedDefaultLocale = Locale.getDefault();
+        var = Locale.getDefault();
     }
 
     @Override
     public void tearDown() {
-        Locale.setDefault(savedDefaultLocale);
+        Locale.setDefault(var);
     }
 
 //    public void testConvertDbToUserFmt() throws InvalidDateException {

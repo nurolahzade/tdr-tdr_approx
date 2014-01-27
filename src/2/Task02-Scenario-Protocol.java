@@ -81,11 +81,11 @@ public class DateUtilsTest extends TestCase {
         java.util.Date date2 = userFormat.parse("2006-01-01");
         java.util.Date date3 = userFormat.parse("2006-01-01");
         java.util.Date date4 = userFormat.parse("2006-12-31");
-       Assert.assertEquals(365, util.getNumberOfDaysBetweenTwoDates(date1, date2));
+       Assert.assertTrue(365 == util.getNumberOfDaysBetweenTwoDates(date1, date2));
 //       Assert.assertEquals(0, DateUtils.getNumberOfDaysBetweenTwoDates(date2, date3));
         date3 = userFormat.parse("2006-01-05");
-       Assert.assertEquals(4, util.getNumberOfDaysBetweenTwoDates(date3, date2));
-       Assert.assertEquals(1, util.getNumberOfDaysBetweenTwoDates(date3, date4));
+       Assert.assertTrue(4 == util.getNumberOfDaysBetweenTwoDates(date3, date2));
+       Assert.assertTrue(1 == util.getNumberOfDaysBetweenTwoDates(date3, date4));
     }
 
 //    public void testGetDatePlusXDays() throws Exception {

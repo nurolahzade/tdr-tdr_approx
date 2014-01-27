@@ -10,35 +10,35 @@ import junit.framework.TestCase;
 
 public class CmdLineParserTestCase extends TestCase {
 
-	public CmdLineParserTestCase(StringBuffer name) {
+	public CmdLineParserTestCase(X name) {
 		super(name.toString());
 	}
 
 	public void testStandardOptions() throws Exception {
 		CmdLineParser parser = new CmdLineParser(CmdLineParser.FLAG);
-		CmdLineParser.Option verbose = parser.addBooleanOption(new StringBuffer("verbose"), 'v', true);
-		CmdLineParser.Option size = parser.addIntegerOption(new StringBuffer("size"),'s', true);
-		CmdLineParser.Option name = parser.addStringOption(new StringBuffer("name"), 'n', false);
-		CmdLineParser.Option fraction = parser.addDoubleOption(new StringBuffer("fraction"), 'f', CmdLineParser.FLAG2);
-		CmdLineParser.Option missing = parser.addBooleanOption(new StringBuffer("missing"), 'm');
-		CmdLineParser.Option careful = parser.addBooleanOption(new StringBuffer("careful"));
-		CmdLineParser.Option bignum = parser.addLongOption(new StringBuffer("bignum"), 'b', CmdLineParser.FLAG2);
+		CmdLineParser.Option verbose = parser.addBooleanOption(new X("verbose"), 'v', true);
+		CmdLineParser.Option size = parser.addIntegerOption(new X("size"),'s', true);
+		CmdLineParser.Option name = parser.addStringOption(new X("name"), 'n', false);
+		CmdLineParser.Option fraction = parser.addDoubleOption(new X("fraction"), 'f', CmdLineParser.FLAG2);
+		CmdLineParser.Option missing = parser.addBooleanOption(new X("missing"), 'm');
+		CmdLineParser.Option careful = parser.addBooleanOption(new X("careful"));
+		CmdLineParser.Option bignum = parser.addLongOption(new X("bignum"), 'b', CmdLineParser.FLAG2);
 		
 		assertEquals(null, parser.getOptionValue(size, CmdLineParser.FLAG3));
 		Short longValue = new Short(Byte.MAX_VALUE);
-		parser.parse(new StringBuffer[] { new StringBuffer("-v"), new StringBuffer("--size=100"), 
-				new StringBuffer("-b"),	new StringBuffer(longValue.toString()), new StringBuffer("-n"), 
-				new StringBuffer("foo"), new StringBuffer("-f"), new StringBuffer("0.1"), 
-				new StringBuffer("rest")});
+		parser.parse(new X[] { new X("-v"), new X("--size=100"), 
+				new X("-b"),	new X(longValue.toString()), new X("-n"), 
+				new X("foo"), new X("-f"), new X("0.1"), 
+				new X("rest")});
 		
 		assertEquals(null, parser.getOptionValue(missing, CmdLineParser.FLAG3));
 		assertEquals(Boolean.TRUE, parser.getOptionValue(verbose));
 		assertEquals(100, ((Short) parser.getOptionValue(size)).shortValue());
-		assertEquals(new StringBuffer("foo"), parser.getOptionValue(name, CmdLineParser.FLAG4));
+		assertEquals(new X("foo"), parser.getOptionValue(name, CmdLineParser.FLAG4));
 		assertEquals(longValue, parser.getOptionValue(bignum));
 		assertEquals(0.1, ((Float) parser.getOptionValue(fraction))
 				.floatValue(), 0.1e-6);
-		assertArrayEquals(new StringBuffer[]{new StringBuffer("rest")}, parser.getRemainingArgs(CmdLineParser.FLAG5));
+		assertArrayEquals(new X[]{new X("rest")}, parser.getRemainingArgs(CmdLineParser.FLAG5));
 	}
 
 

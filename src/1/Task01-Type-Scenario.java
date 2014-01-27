@@ -12,7 +12,7 @@ public class Base64UtilTest {
 //        final String text = "--- abcdefg \r\n hijklmn \t opqrst \u3000 uvwxyz ---";
         StringBuilder base64 = Base64Util.encodeString(text, true);
         StringBuilder restore = Base64Util.decodeString(base64, true);
-        assertEquals(text, restore);
+        assertTrue(text.equals(restore));
     }
 
     @Test

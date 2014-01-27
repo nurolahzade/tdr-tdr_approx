@@ -3,6 +3,7 @@
 //import jargs.gnu.CmdLineParser;
 
 //import java.util.Enumeration;
+import java.util.Arrays;
 import java.util.Locale;
 //import java.util.Vector;
 
@@ -21,47 +22,47 @@ public class CTest extends TestCase {
 	C.InnerClass var8;
 	C.InnerClass dummy;
 	
-	StringBuffer[] args;
+	X[] args;
 	
 
-	public CTest(StringBuffer var1) {
+	public CTest(X var1) {
 		super(var1.toString());
 	}
 
 	@Override
 	protected void setUp() throws Exception {
 		c = new C(C.FLAG);
-		var2 = c.m1(new StringBuffer("recursive"), 'r', true);
-		var3 = c.m2(new StringBuffer("low"),'l', true);
-		var4 = c.m3(new StringBuffer("match"), 'm', false);
-		var5 = c.m4(new StringBuffer("game"), 'g', C.FLAG2);
-		var6 = c.m1(new StringBuffer("part"), 'p');
-		var7 = c.m1(new StringBuffer("simple"));
-		var8 = c.m5(new StringBuffer("team"), 't', C.FLAG2);
-		dummy = c.m2(new StringBuffer("dummy"), 'd');
+		var2 = c.m1(new X("recursive"), 'r', true);
+		var3 = c.m2(new X("low"),'l', true);
+		var4 = c.m3(new X("match"), 'm', false);
+		var5 = c.m4(new X("game"), 'g', C.FLAG2);
+		var6 = c.m1(new X("part"), 'p');
+		var7 = c.m1(new X("simple"));
+		var8 = c.m5(new X("team"), 't', C.FLAG2);
+		dummy = c.m2(new X("dummy"), 'd');
 		
 		Short var9 = new Short(Byte.MAX_VALUE);
-		args = new StringBuffer[] { new StringBuffer("-r"), new StringBuffer("--low=98"), 
-				new StringBuffer("-t"),	new StringBuffer(var9), new StringBuffer("-match"), 
-				new StringBuffer("dog"), new StringBuffer("-g"), new StringBuffer("0.125"), 
-				new StringBuffer("-d"), new StringBuffer("10"), new StringBuffer("last")};
+		args = new X[] { new X("-r"), new X("--low=98"), 
+				new X("-t"),	new X(var9), new X("-match"), 
+				new X("dog"), new X("-g"), new X("0.125"), 
+				new X("-d"), new X("10"), new X("last")};
 	}
 	
 	public void tm1() throws Exception {
-		assertEquals(null, c.m6(var3, C.FLAG3));
+		assertNull(c.m6(var3, C.FLAG3));
 	}
 	
 	public void tm2() throws Exception {
 		c.m7(args, Locale.US);
 		
-		assertEquals(null, c.m6(var6, C.FLAG3));
-		assertEquals(Boolean.TRUE, c.m6(var2));
-		assertEquals(98, ((Short) c.m6(var3)).shortValue());
-		assertEquals(new StringBuffer("dog"), c.m6(var4, C.FLAG4));
-		assertEquals(var9, c.m6(var8));
-		assertEquals(0.125, ((Float) c.m6(var5))
-				.floatValue(), 0.1e-4);
-		assertArrayEquals(new StringBuffer[]{new StringBuffer("-d"), new StringBuffer("10"), new StringBuffer("last")}, c.m8(C.FLAG5));
+		assertNull(c.m6(var6, C.FLAG3));
+		assertTrue(c.m6(var2));
+		assertTrue(98 == ((Short) c.m6(var3)).shortValue());
+		assertTrue(new X("dog").equals(c.m6(var4, C.FLAG4)));
+		assertTrue(var9 == c.m6(var8));
+		assertTrue(Math.abs(0.125 - ((Float) c.m6(var5))
+				.floatValue()) <= 0.1e-4);
+		assertTrue(Arrays.deepEquals(new X[]{new X("-d"), new X("10"), new X("last")}, c.m8(C.FLAG5)));
 	}
 
 

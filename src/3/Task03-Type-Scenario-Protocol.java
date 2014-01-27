@@ -12,7 +12,7 @@
 
 import org.junit.Before;
 import org.junit.Test;
-import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 
 /**
  * The Class ConvertHtmlToTextTest.
@@ -45,21 +45,21 @@ public class ConvertHtmlToTextTest {
 
         ConvertHtmlToText instance = new ConvertHtmlToText(ConvertHtmlToText.FLAG);
 
-        final StringBuilder expResult = this.getExpResult();
+        final X expResult = this.getExpResult();
         String var = instance.aDummyMethod(true);
-        final StringBuilder result = instance.convert(true, getSource(), 1);
+        final X result = instance.convert(true, getSource(), 1);
         instance.anotherDummyMethod(var);
 
         // System.out.println("Expected Result: " +
         // StringUtils.replace(expResult, "\n","~"));
         // System.out.println("Result: " + StringUtils.replace(result, "\n","~"));;
 
-        assertEquals(expResult, result);
+        assertTrue(expResult.equals(result));
     
         String html = "<html><head></head><body><p>Hello!</p></body></html>";
         String text = "Hello!\n";
         String _var = instance.aDummyMethod(false);
-        assertEquals(text, instance.convert(false, html, 0));
+        assertTrue(text.equals(instance.convert(false, html, 0)));
         instance.anotherDummyMethod(_var);
     }
 
@@ -68,8 +68,8 @@ public class ConvertHtmlToTextTest {
      *
      * @return the source
      */
-    private StringBuilder getSource() {
-        StringBuilder source = new StringBuilder();
+    private X getSource() {
+        X source = new X();
 
         source.append("<html>");
         source.append("<head>");
@@ -107,8 +107,8 @@ public class ConvertHtmlToTextTest {
      *
      * @return the exp result
      */
-    private StringBuilder getExpResult() {
-        StringBuilder result = new StringBuilder();
+    private X getExpResult() {
+        X result = new X();
         result.append("My first page \n");
         result.append("\n");
         result.append("This is my first web page and I can say anything ");

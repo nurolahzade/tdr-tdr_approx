@@ -6,6 +6,7 @@
 //import java.util.Locale;
 //import java.util.Vector;
 
+import java.util.Arrays;
 import java.util.Locale;
 
 import junit.framework.TestCase;
@@ -24,7 +25,7 @@ public class CmdLineParserTestCase extends TestCase {
 	
 	String[] args;
 	
-	public CmdLineParserTestCase(StringBuffer name) {
+	public CmdLineParserTestCase(X name) {
 		super(name.toString());
 	}
 
@@ -45,21 +46,21 @@ public class CmdLineParserTestCase extends TestCase {
 	}
 
 	public void testEmptyArguments() throws Exception {
-		assertEquals(null, parser.getOptionValue(size));		
+		assertNull(parser.getOptionValue(size));		
 	}
 	
 	public void testStandardOptions() throws Exception {		
 		parser.parse(args, Locale.US);
 		
-		assertEquals(null, parser.getOptionValue(missing, CmdLineParser.FLAG3));
-		assertEquals(Boolean.TRUE, parser.getOptionValue(verbose));
-		assertEquals(98, ((Short) parser.getOptionValue(size)).shortValue());
-		assertEquals(new StringBuffer("dog"), parser.getOptionValue(name, CmdLineParser.FLAG4));
-		assertEquals(longValue, parser.getOptionValue(bignum));
-		assertEquals(0.125, ((Float) parser.getOptionValue(fraction))
-				.floatValue(), 0.1e-4);
-		assertArrayEquals(new StringBuffer[]{new StringBuffer("-d"), new StringBuffer("10"), 
-				new StringBuffer("last")}, parser.getRemainingArgs(CmdLineParser.FLAG5));
+		assertNull(parser.getOptionValue(missing, CmdLineParser.FLAG3));
+		assertTrue(parser.getOptionValue(verbose));
+		assertTrue(98 == ((Short) parser.getOptionValue(size)).shortValue());
+		assertTrue(new X("dog").equals(parser.getOptionValue(name, CmdLineParser.FLAG4)));
+		assertTrue(1234 == parser.getOptionValue(bignum));
+		assertTrue(Math.abs(0.125 - ((Float) parser.getOptionValue(fraction))
+				.floatValue()) <= 0.1e-4);
+		assertTrue(Arrays.deepEquals(new X[]{new X("-d"), new X("10"), 
+				new X("last")}, parser.getRemainingArgs(CmdLineParser.FLAG5)));
 	}
 
 

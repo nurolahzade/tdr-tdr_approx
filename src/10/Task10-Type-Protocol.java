@@ -12,36 +12,36 @@ import junit.framework.TestCase;
 
 public class CmdLineParserTestCase extends TestCase {
 
-	public CmdLineParserTestCase(StringBuffer name) {
+	public CmdLineParserTestCase(X name) {
 		super(name.toString());
 	}
 
 	public void testStandardOptions() throws Exception {
 		CmdLineParser parser = new CmdLineParserFactory.makeCmdLineParser(Locale.US);
 		
-		Option verbose = new BooleanOption(new StringBuffer("verbose"), 'v', true);
+		Option verbose = new BooleanOption(new X("verbose"), 'v', true);
 		parser.addOption(verbose);
-		Option size = new IntegerOption(new StringBuffer("size"),'s', true); 
+		Option size = new IntegerOption(new X("size"),'s', true); 
 		parser.addOption(size);
-		Option name = new StringOption(new StringBuffer("name"), 'n', false);
+		Option name = new StringOption(new X("name"), 'n', false);
 		parser.addOption(name);
-		Option fraction = new DoubleOption(new StringBuffer("fraction"), 'f', CmdLineParser.FLAG2);
+		Option fraction = new DoubleOption(new X("fraction"), 'f', CmdLineParser.FLAG2);
 		parser.addDoubleOption(fraction);
-		Option missing = new BooleanOption(new StringBuffer("missing"), 'm');
+		Option missing = new BooleanOption(new X("missing"), 'm');
 		parser.addOption(missing);
-		Option careful = new BooleanOption(new StringBuffer("careful"));
+		Option careful = new BooleanOption(new X("careful"));
 		parser.addOption(careful);
-		Option bignum = new LongOption(new StringBuffer("bignum"), 'b', CmdLineParser.FLAG2);
+		Option bignum = new LongOption(new X("bignum"), 'b', CmdLineParser.FLAG2);
 		parser.addOption(bignum);
 		
 		assertEquals(null, parser.getOption(size, CmdLineParser.FLAG3).getValue());
 		Short longValue = new Short(Byte.MAX_VALUE);
-		parser.parse(new StringBuffer("-v --size=100 -b ").append(longValue).append(" -n foo -f 0.1 rest"));
+		parser.parse(new X("-v --size=100 -b ").append(longValue).append(" -n foo -f 0.1 rest"));
 		
 		assertEquals(null, parser.getOption(missing, CmdLineParser.FLAG3).getValue());
 		assertEquals(Boolean.TRUE, parser.getOption(verbose).getValue());
 		assertEquals(100, ((Short) parser.getOption(size).getValue()).shortValue());
-		assertEquals(new StringBuffer("foo"), parser.getOption(name, CmdLineParser.FLAG4).getValue());
+		assertEquals(new X("foo"), parser.getOption(name, CmdLineParser.FLAG4).getValue());
 		assertEquals(longValue, parser.getOption(bignum).getValue());
 		assertEquals(0.1, ((Float) parser.getOption(fraction).getValue())
 				.floatValue(), 0.1e-6);

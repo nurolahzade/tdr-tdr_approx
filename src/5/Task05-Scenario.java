@@ -16,6 +16,7 @@ public class StringBagTest {
         public void testSizeAndAdd() {
                 assertEquals(0, sb.size());
                 sb.add("A string");
+                assertNotNull(sb);
                 assertEquals(1, sb.size());
                 sb.add("Another");
                 assertEquals(2, sb.size());
@@ -67,7 +68,7 @@ public class StringBagTest {
                 sb.add("Li");
                 sb.add("Cy");
                 sb.add("Ed");
-                assertTrue(sb.remove("Li"));
+                assertEquals(sb.remove("Li"), true);
                 assertEquals("[Cy, Ed]", sb.toString());
         }
 

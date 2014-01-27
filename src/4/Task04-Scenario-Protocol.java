@@ -40,7 +40,7 @@ public class CreditcardUtilTest {
     	    	util = new TypeValidatorUtil(type);
        			boolean result = util.isCreditcardNumber(number);
    
-       			assertEquals(type == map.get(number), result);
+       			assertTrue((type == map.get(number)) == result);
     		}
     	}
     	
